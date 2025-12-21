@@ -3,162 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carmine D'Alise – Digital Lead & Technical Operations</title>
+  <title>Carmine D'Alise | Digital Lead | Technical Operations | Support Engineer</title>
   <style>
     :root {
-      --bg: #0f172a; --card: #111827; --primary: #38bdf8;
-      --secondary: #22c55e; --text: #e5e7eb; --muted: #9ca3af;
+      --bg: #020617; --card: #0f172a; --primary: #38bdf8;
+      --secondary: #22c55e; --text: #f1f5f9; --muted: #94a3b8;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: linear-gradient(180deg, #020617, var(--bg));
-      color: var(--text); line-height: 1.6;
+      background: var(--bg); color: var(--text); line-height: 1.6;
     }
-    header, section { max-width: 1100px; margin: auto; padding: 2rem; }
-    header { padding-top: 4rem; }
-    h1 { font-size: 3rem; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
-    h2 { font-size: 1.2rem; color: var(--primary); margin-top: 0.8rem; font-weight: 500; }
-    header p { margin-top: 1.5rem; color: var(--muted); font-size: 1.05rem; max-width: 850px; }
-    h3 { margin-bottom: 2rem; color: var(--secondary); border-left: 3px solid var(--secondary); padding-left: 1rem; font-size: 1.4rem; }
+    header, section { max-width: 1000px; margin: auto; padding: 2rem; }
+    header { padding-top: 5rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; }
+    h2 { font-size: 1.1rem; color: var(--primary); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+    header p { margin-top: 1.5rem; color: var(--muted); font-size: 1.1rem; max-width: 800px; }
     
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    h3 { margin-bottom: 1.5rem; color: var(--secondary); font-size: 1.3rem; display: flex; align-items: center; gap: 10px; }
+    h3::after { content: ""; flex: 1; height: 1px; background: rgba(255,255,255,0.1); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
     .card {
-      background: rgba(17, 24, 39, 0.7); border-radius: 16px; padding: 1.8rem;
-      border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;
+      background: var(--card); border-radius: 12px; padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.05); transition: 0.3s;
     }
-    .card:hover { border-color: var(--primary); transform: translateY(-4px); background: rgba(17, 24, 39, 0.9); }
-    h4 { margin-bottom: 0.8rem; font-size: 1.1rem; color: #fff; }
-    .card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.2rem; }
-    
-    .badge { 
-      display: inline-block; margin: 2px; padding: 0.3rem 0.6rem; 
-      font-size: 0.75rem; border-radius: 6px; background: rgba(56,189,248,0.1); color: var(--primary); 
-      border: 1px solid rgba(56,189,248,0.1);
-    }
+    .card:hover { border-color: var(--primary); background: rgba(15, 23, 42, 0.8); }
+    h4 { margin-bottom: 0.6rem; color: #fff; font-size: 1.1rem; }
+    .card p { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
+
+    .history-section { background: rgba(56, 189, 248, 0.03); border-radius: 20px; padding: 2rem; margin: 2rem 0; border: 1px solid rgba(56, 189, 248, 0.1); }
+    .lang-badge { display: inline-block; padding: 4px 12px; border-radius: 6px; background: rgba(34, 197, 94, 0.1); color: var(--secondary); font-size: 0.8rem; font-weight: 700; margin-right: 10px; }
+
+    .cta-container { display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap; }
     .cta { 
-      display: inline-block; margin-top: 2rem; padding: 0.8rem 1.8rem; 
-      border-radius: 50px; background: linear-gradient(90deg, var(--primary), var(--secondary)); 
-      color: #020617; font-weight: 700; text-decoration: none; font-size: 0.9rem; transition: 0.2s;
+      padding: 0.8rem 1.8rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.9rem; transition: 0.2s;
     }
-    .cta:hover { filter: brightness(1.1); transform: scale(1.02); }
+    .cta-primary { background: var(--primary); color: #020617; }
+    .cta-secondary { border: 1px solid var(--muted); color: var(--text); }
+    .cta:hover { transform: translateY(-2px); opacity: 0.9; }
 
-    .cert-box {
-        margin-top: 20px;
-        padding: 15px;
-        background: rgba(34, 197, 94, 0.1);
-        border: 1px dashed var(--secondary);
-        border-radius: 12px;
-        font-size: 0.9rem;
-        color: var(--secondary);
-    }
+    .lang-switch { text-align: right; padding: 1rem 2rem; position: sticky; top: 0; background: var(--bg); z-index: 10; }
+    .lang-switch button { background: none; border: 1px solid var(--muted); color: var(--muted); padding: 5px 10px; cursor: pointer; border-radius: 4px; font-size: 0.7rem; transition: 0.3s; }
+    .lang-switch button:hover { border-color: var(--primary); color: var(--primary); }
 
-    footer { padding: 4rem 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05); }
-    .lang-switch { text-align: right; padding: 1.5rem 2rem; }
-    .lang-btn { background: rgba(56, 189, 248, 0.15); color: var(--primary); border: 1px solid var(--primary); padding: 0.5rem 1rem; cursor: pointer; border-radius: 8px; margin-left: 10px; font-weight: 600; }
+    footer { padding: 3rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
   </style>
 </head>
 <body>
 
 <div class="lang-switch">
-  <button class="lang-btn" onclick="switchLang('en')">English</button>
-  <button class="lang-btn" onclick="switchLang('it')">Italiano</button>
+  <button onclick="switchLang('en')">ENGLISH</button>
+  <button onclick="switchLang('it')">ITALIANO</button>
 </div>
 
 <header>
   <h1>Carmine D'Alise</h1>
-  <h2 id="subtitle">Digital Lead | Full Stack Developer | Technical Project Manager</h2>
+  <h2 id="subtitle">Digital Lead | Technical Support Engineer | Service Manager</h2>
   <p id="header-text">
-    Executive professional with over 20 years of international experience across cruise ships, luxury hospitality, and land-based environments. Specialized in digital media and IT operations.
+    20+ years of international experience bridging the gap between digital innovation and technical operations. Specialized in luxury hospitality and maritime environments.
   </p>
-  
-  <div class="cert-box" id="cert-text">
-    ⭐ <strong>LinkedIn Verified:</strong> All technical certifications are available and verified on my LinkedIn profile.
-  </div>
-
-  <div style="display: flex; gap: 15px; margin-top: 20px;">
-    <a class="cta" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank">LinkedIn Profile</a>
-    <a class="cta" href="https://github.com/iacreatorcar" target="_blank" style="background: #334155; color: #fff;">GitHub</a>
+  <div class="cta-container">
+    <a class="cta cta-primary" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank">LinkedIn: References & Verified Certs</a>
+    <a class="cta cta-secondary" href="https://github.com/iacreatorcar" target="_blank">GitHub Projects</a>
   </div>
 </header>
 
 <section>
-  <h3 id="sec-profile">Professional Identity</h3>
-  <div class="grid">
-    <div class="card">
-      <h4 id="card-title-1">Digital media & content</h4>
-      <p id="card-desc-1">Management of multimedia content and interactive platforms for guest experience.</p>
-      <div class="badge">CMS</div> <div class="badge">Digital Signage</div> <div class="badge">YouTube API</div>
-    </div>
-    <div class="card">
-      <h4 id="card-title-2">Hospitality & Resort Tech</h4>
-      <p id="card-desc-2">Specialized in AV/IT solutions for luxury resorts and maritime environments.</p>
-      <div class="badge">Starlink</div> <div class="badge">Otalio</div> <div class="badge">MagicInfo</div>
-    </div>
-    <div class="card">
-      <h4 id="card-title-3">Project & AI lead</h4>
-      <p id="card-desc-3">Leadership of complex digital rollouts and AI automation workflows.</p>
-      <div class="badge">Agile</div> <div class="badge">AI Agents</div> <div class="badge">Delivery</div>
+  <div class="history-section">
+    <h3 id="sec-journey">The Journey: Hospitality & Operations</h3>
+    <p id="hist-body" style="font-size: 1rem; color: var(--text);">
+      Esperto nella gestione di ecosistemi digitali complessi per resort e navi da crociera. Eccello nella risoluzione proattiva dei problemi tecnici attraverso flussi di <strong>ticketing strutturati</strong>, coordinando team multiculturali per garantire una User Experience impeccabile. Dalla gestione dei contenuti web all'infrastruttura IT, trasformo le sfide tecniche in continuità operativa.
+    </p>
+    <div style="margin-top: 20px;">
+      <span class="lang-badge">ENGLISH: Fluent</span>
+      <span class="lang-badge">SPANISH: Fluent</span>
+      <span class="lang-badge">ITALIAN: Native</span>
     </div>
   </div>
 </section>
 
 <section>
-    <h3 id="sec-media">Multimedia & Showcase</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>Video Portfolio</h4>
-            <p>Watch my technical implementations and hospitality projects on my YouTube channel.</p>
-            <a href="#" style="color: var(--primary); font-size: 0.85rem; text-decoration: none;">Link to YouTube →</a>
-        </div>
-        <div class="card">
-            <h4>Protected Documentation</h4>
-            <p>Advanced technical schematics and StarDraw projects. (Password required in cover letter).</p>
-            <a href="#" style="color: var(--muted); font-size: 0.85rem; text-decoration: none; cursor: not-allowed;">Private Access (TeraBox)</a>
-        </div>
+  <h3 id="sec-expertise">Key Expertise</h3>
+  <div class="grid">
+    <div class="card">
+      <h4 id="t1">Digital Lead & Implementation</h4>
+      <p id="d1">Strategia e deployment di contenuti web, integrazioni Stripe e gestione CMS per ottimizzare il marketing e le vendite digitali.</p>
     </div>
+    <div class="card">
+      <h4 id="t2">Technical Operations Support</h4>
+      <p id="d2">Supporto ingegneristico per sistemi AV, networking satellitare (Starlink/Peplink) e infrastrutture mission-critical in hospitality.</p>
+    </div>
+    <div class="card">
+      <h4 id="t3">Service & Ticket Management</h4>
+      <p id="d3">Gestione del ciclo di vita del servizio, risoluzione ticket e leadership tecnica di team internazionali in ambienti dinamici.</p>
+    </div>
+  </div>
 </section>
 
 <section>
-  <h3 id="sec-keys">Key Systems & Brands</h3>
-  <div class="card" style="width: 100%; border-left: 4px solid var(--primary);">
-    <p style="font-size: 0.95rem; line-height: 1.8;">
-      <strong>Core Platforms:</strong> Sanity | Liferay | Samsung MagicInfo VXT | LG Pro:Centric | StarDraw AV | Dante AV Networking | Crestron | Control4 | Starlink | HPE | 5G Satellite Systems | <strong>Otalio</strong>
+  <h3 id="sec-ecosystem">Technical Ecosystem</h3>
+  <div class="card" style="width: 100%; border-left: 4px solid var(--secondary);">
+    <p style="font-size: 0.9rem; letter-spacing: 0.5px;">
+      Sanity | Liferay | Samsung MagicInfo | LG Pro:Centric | StarDraw AV | Dante AV | Crestron | Control4 | Starlink | HPE | Peplink 5G | Otalio | <strong>Stripe Payments</strong> | Adobe Creative Cloud | Figma | AI Intelligent Agents
     </p>
   </div>
 </section>
 
-<footer id="footer-text">
-  © 2025 Carmine D'Alise | Digital Lead | Digital Media Expert
+<footer>
+  © 2025 Carmine D'Alise | Digital Lead | Technical Operations Expert
 </footer>
 
 <script>
   function switchLang(lang) {
     const t = {
       en: {
-        cert: "⭐ <strong>LinkedIn Verified:</strong> All technical certifications (Samsung, Crestron, Dante, Control4) are available and verified on my LinkedIn profile.",
-        sub: "Digital Lead | Full Stack Developer | Technical Project Manager",
-        h: "Executive professional with over 20 years of international experience across cruise ships, luxury hospitality, and land-based environments. Specialized in digital media and IT operations.",
-        p: "Professional Identity",
-        m: "Multimedia & Showcase",
-        f: "© 2025 Carmine D'Alise | Digital Lead | Digital Media Expert"
+        sub: "Digital Lead | Technical Support Engineer | Service Manager",
+        h: "20+ years of international experience bridging the gap between digital innovation and technical operations. Specialized in luxury hospitality and maritime environments.",
+        sj: "The Journey: Hospitality & Operations",
+        hb: "Expert in managing complex digital ecosystems for resorts and cruise ships. I excel in proactive technical problem solving through <strong>structured ticketing workflows</strong>, coordinating multicultural teams to ensure a flawless User Experience. From web content management to IT infrastructure, I turn technical challenges into operational continuity.",
+        se: "Key Expertise",
+        secEco: "Technical Ecosystem",
+        t1: "Digital Lead & Implementation", d1: "Strategy and deployment of web content, Stripe integrations, and CMS management to optimize marketing and digital sales.",
+        t2: "Technical Operations Support", d2: "Engineering support for AV systems, satellite networking (Starlink/Peplink), and mission-critical hospitality infrastructures.",
+        t3: "Service & Ticket Management", d3: "Service lifecycle management, ticket resolution, and technical leadership of international teams in dynamic environments."
       },
       it: {
-        cert: "⭐ <strong>Verificato su LinkedIn:</strong> Tutte le certificazioni tecniche (Samsung, Crestron, Dante, Control4) sono disponibili e verificate sul mio profilo LinkedIn.",
-        sub: "Digital Lead | Sviluppatore Full Stack | Technical Project Manager",
-        h: "Professionista con oltre 20 anni di esperienza internazionale in navi da crociera, ospitalità di lusso e contesti terrestri. Specializzato in media digitali e operazioni IT.",
-        p: "Identità Professionale",
-        m: "Multimedia & Showcase",
-        f: "© 2025 Carmine D'Alise | Digital Lead | Esperto Media Digitali"
+        sub: "Digital Lead | Technical Support Engineer | Service Manager",
+        h: "Oltre 20 anni di esperienza internazionale nel collegare innovazione digitale e operazioni tecniche. Specializzato in hospitality di lusso e ambienti marittimi.",
+        sj: "Il Percorso: Hospitality & Operations",
+        hb: "Esperto nella gestione di ecosistemi digitali complessi per resort e navi da crociera. Eccello nella risoluzione proattiva dei problemi tecnici attraverso flussi di <strong>ticketing strutturati</strong>, coordinando team multiculturali per garantire una User Experience impeccabile. Dalla gestione dei contenuti web all'infrastruttura IT, trasformo le sfide tecniche in continuità operativa.",
+        se: "Competenze Chiave",
+        secEco: "Ecosistema Tecnico",
+        t1: "Digital Lead & Implementazione", d1: "Strategia e deployment di contenuti web, integrazioni Stripe e gestione CMS per ottimizzare il marketing e le vendite digitali.",
+        t2: "Supporto Operativo Tecnico", d2: "Supporto ingegneristico per sistemi AV, networking satellitare (Starlink/Peplink) e infrastrutture mission-critical.",
+        t3: "Service & Ticket Management", d3: "Gestione del ciclo di vita del servizio, risoluzione ticket e leadership tecnica di team internazionali in ambienti dinamici."
       }
     };
     
-    document.getElementById('cert-text').innerHTML = t[lang].cert;
     document.getElementById('subtitle').innerText = t[lang].sub;
     document.getElementById('header-text').innerHTML = t[lang].h;
-    document.getElementById('sec-profile').innerText = t[lang].p;
-    document.getElementById('sec-media').innerText = t[lang].m;
-    document.getElementById('footer-text').innerText = t[lang].f;
+    document.getElementById('sec-journey').innerText = t[lang].sj;
+    document.getElementById('hist-body').innerHTML = t[lang].hb;
+    document.getElementById('sec-expertise').innerText = t[lang].se;
+    document.getElementById('sec-ecosystem').innerText = t[lang].secEco;
+    document.getElementById('t1').innerText = t[lang].t1;
+    document.getElementById('d1').innerText = t[lang].d1;
+    document.getElementById('t2').innerText = t[lang].t2;
+    document.getElementById('d2').innerText = t[lang].d2;
+    document.getElementById('t3').innerText = t[lang].t3;
+    document.getElementById('d3').innerText = t[lang].d3;
   }
 </script>
 
