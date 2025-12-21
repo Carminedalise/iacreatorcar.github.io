@@ -42,20 +42,20 @@
       color: #020617; font-weight: 700; text-decoration: none; font-size: 0.9rem; transition: 0.2s;
     }
     .cta:hover { filter: brightness(1.1); transform: scale(1.02); }
-    
-    ul { list-style: none; font-size: 0.9rem; }
-    li { margin-bottom: 0.6rem; color: var(--text); display: flex; align-items: flex-start; gap: 8px; }
-    li::before { content: "•"; color: var(--primary); font-weight: bold; }
+
+    .cert-box {
+        margin-top: 20px;
+        padding: 15px;
+        background: rgba(34, 197, 94, 0.1);
+        border: 1px dashed var(--secondary);
+        border-radius: 12px;
+        font-size: 0.9rem;
+        color: var(--secondary);
+    }
 
     footer { padding: 4rem 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05); }
-    
     .lang-switch { text-align: right; padding: 1.5rem 2rem; }
-    .lang-btn { 
-      background: rgba(56, 189, 248, 0.15); color: var(--primary); 
-      border: 1px solid var(--primary); padding: 0.5rem 1rem; cursor: pointer; 
-      border-radius: 8px; margin-left: 10px; font-weight: 600; transition: 0.3s;
-    }
-    .lang-btn:hover { background: var(--primary); color: #000; }
+    .lang-btn { background: rgba(56, 189, 248, 0.15); color: var(--primary); border: 1px solid var(--primary); padding: 0.5rem 1rem; cursor: pointer; border-radius: 8px; margin-left: 10px; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -69,11 +69,16 @@
   <h1>Carmine D'Alise</h1>
   <h2 id="subtitle">Digital Lead | Full Stack Developer | Technical Project Manager</h2>
   <p id="header-text">
-    Executive professional with over 20 years of international experience across cruise ships, luxury hospitality, and land-based environments. Specialized in digital media, IT operations, and service support, delivering reliable and scalable solutions.
+    Executive professional with over 20 years of international experience across cruise ships, luxury hospitality, and land-based environments. Specialized in digital media and IT operations.
   </p>
-  <div style="display: flex; gap: 15px;">
-    <a class="cta" href="https://github.com/iacreatorcar" target="_blank" id="github-btn">GitHub</a>
-    <a class="cta" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank" id="linkedin-btn">LinkedIn</a>
+  
+  <div class="cert-box" id="cert-text">
+    ⭐ <strong>LinkedIn Verified:</strong> All technical certifications are available and verified on my LinkedIn profile.
+  </div>
+
+  <div style="display: flex; gap: 15px; margin-top: 20px;">
+    <a class="cta" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank">LinkedIn Profile</a>
+    <a class="cta" href="https://github.com/iacreatorcar" target="_blank" style="background: #334155; color: #fff;">GitHub</a>
   </div>
 </header>
 
@@ -83,49 +88,35 @@
     <div class="card">
       <h4 id="card-title-1">Digital media & content</h4>
       <p id="card-desc-1">Management of multimedia content and interactive platforms for guest experience.</p>
-      <div class="badge">CMS</div> <div class="badge">Digital Signage</div> <div class="badge">React</div> <div class="badge">Kiosks</div>
+      <div class="badge">CMS</div> <div class="badge">Digital Signage</div> <div class="badge">YouTube API</div>
     </div>
     <div class="card">
-      <h4 id="card-title-2">Technical operations</h4>
-      <p id="card-desc-2">System reliability and hands-on technical support for AV and networking.</p>
-      <div class="badge">AV Systems</div> <div class="badge">Networking</div> <div class="badge">StarDraw</div> <div class="badge">Troubleshooting</div>
+      <h4 id="card-title-2">Hospitality & Resort Tech</h4>
+      <p id="card-desc-2">Specialized in AV/IT solutions for luxury resorts and maritime environments.</p>
+      <div class="badge">Starlink</div> <div class="badge">Otalio</div> <div class="badge">MagicInfo</div>
     </div>
     <div class="card">
       <h4 id="card-title-3">Project & AI lead</h4>
       <p id="card-desc-3">Leadership of complex digital rollouts and AI automation workflows.</p>
-      <div class="badge">Agile</div> <div class="badge">AI Agents</div> <div class="badge">Stakeholders</div> <div class="badge">Delivery</div>
-    </div>
-    <div class="card">
-      <h4 id="card-title-4">Front-end design & UX</h4>
-      <p id="card-desc-4">Interface design and prototyping focused on user experience.</p>
-      <div class="badge">Canva</div> <div class="badge">Figma</div> <div class="badge">Adobe</div>
-    </div>
-    <div class="card">
-      <h4 id="card-title-5">Back-end & development</h4>
-      <p id="card-desc-5">Architecture of server-side solutions and automation integrations.</p>
-      <div class="badge">Node.js</div> <div class="badge">Python</div> <div class="badge">n8n</div> <div class="badge">APIs</div>
+      <div class="badge">Agile</div> <div class="badge">AI Agents</div> <div class="badge">Delivery</div>
     </div>
   </div>
 </section>
 
 <section>
-  <h3 id="sec-value">Value Proposition</h3>
-  <div class="grid">
-    <div class="card">
-      <ul id="list-1">
-        <li>International rotational contract specialist</li>
-        <li>Deep maritime and hospitality technology expertise</li>
-        <li>Operational mindset with strategic leadership</li>
-      </ul>
+    <h3 id="sec-media">Multimedia & Showcase</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>Video Portfolio</h4>
+            <p>Watch my technical implementations and hospitality projects on my YouTube channel.</p>
+            <a href="#" style="color: var(--primary); font-size: 0.85rem; text-decoration: none;">Link to YouTube →</a>
+        </div>
+        <div class="card">
+            <h4>Protected Documentation</h4>
+            <p>Advanced technical schematics and StarDraw projects. (Password required in cover letter).</p>
+            <a href="#" style="color: var(--muted); font-size: 0.85rem; text-decoration: none; cursor: not-allowed;">Private Access (TeraBox)</a>
+        </div>
     </div>
-    <div class="card">
-      <ul id="list-2">
-        <li>AI-driven automation and efficiency optimization</li>
-        <li>Resilient systems for low-connectivity environments</li>
-        <li>Effective bridge between technical teams and management</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
 <section>
@@ -145,54 +136,28 @@
   function switchLang(lang) {
     const t = {
       en: {
+        cert: "⭐ <strong>LinkedIn Verified:</strong> All technical certifications (Samsung, Crestron, Dante, Control4) are available and verified on my LinkedIn profile.",
         sub: "Digital Lead | Full Stack Developer | Technical Project Manager",
-        h: "Executive professional with over 20 years of international experience across cruise ships, luxury hospitality, and land-based environments. Specialized in digital media, IT operations, and service support, delivering reliable and scalable solutions.",
+        h: "Executive professional with over 20 years of international experience across cruise ships, luxury hospitality, and land-based environments. Specialized in digital media and IT operations.",
         p: "Professional Identity",
-        v: "Value Proposition",
-        k: "Key Systems & Brands",
-        c1t: "Digital media & content", c1d: "Management of multimedia content and interactive platforms for guest experience.",
-        c2t: "Technical operations", c2d: "System reliability and hands-on technical support for AV and networking.",
-        c3t: "Project & AI lead", c3d: "Leadership of complex digital rollouts and AI automation workflows.",
-        c4t: "Front-end design & UX", c4d: "Interface design and prototyping focused on user experience.",
-        c5t: "Back-end & development", c5d: "Architecture of server-side solutions and automation integrations.",
-        l1: "<li>International rotational contract specialist</li><li>Deep maritime and hospitality technology expertise</li><li>Operational mindset with strategic leadership</li>",
-        l2: "<li>AI-driven automation and efficiency optimization</li><li>Resilient systems for low-connectivity environments</li><li>Effective bridge between technical teams and management</li>",
+        m: "Multimedia & Showcase",
         f: "© 2025 Carmine D'Alise | Digital Lead | Digital Media Expert"
       },
       it: {
+        cert: "⭐ <strong>Verificato su LinkedIn:</strong> Tutte le certificazioni tecniche (Samsung, Crestron, Dante, Control4) sono disponibili e verificate sul mio profilo LinkedIn.",
         sub: "Digital Lead | Sviluppatore Full Stack | Technical Project Manager",
-        h: "Professionista con oltre 20 anni di esperienza internazionale in navi da crociera, ospitalità di lusso e contesti terrestri. Specializzato in media digitali, operazioni IT e supporto tecnico, fornendo soluzioni affidabili e scalabili.",
+        h: "Professionista con oltre 20 anni di esperienza internazionale in navi da crociera, ospitalità di lusso e contesti terrestri. Specializzato in media digitali e operazioni IT.",
         p: "Identità Professionale",
-        v: "Proposta di Valore",
-        k: "Sistemi Chiave & Brand",
-        c1t: "Media digitali e contenuti", c1d: "Gestione di contenuti multimediali e piattaforme interattive per l'esperienza ospite.",
-        c2t: "Operazioni tecniche", c2d: "Affidabilità del sistema e supporto tecnico pratico per AV e networking.",
-        c3t: "Project & AI lead", c3d: "Leadership di rollout digitali complessi e flussi di automazione AI.",
-        c4t: "Design front-end & UX", c4d: "Design dell'interfaccia e prototipazione focalizzati sull'esperienza utente.",
-        c5t: "Back-end & sviluppo", c5d: "Architettura di soluzioni lato server e integrazioni di automazione.",
-        l1: "<li>Specialista in contratti rotazionali internazionali</li><li>Profonda competenza tecnologica marittima e alberghiera</li><li>Mentalità operativa con leadership strategica</li>",
-        l2: "<li>Automazione basata su AI e ottimizzazione dell'efficienza</li><li>Sistemi resilienti per ambienti a bassa connettività</li><li>Ponte efficace tra team tecnici e management</li>",
+        m: "Multimedia & Showcase",
         f: "© 2025 Carmine D'Alise | Digital Lead | Esperto Media Digitali"
       }
     };
     
+    document.getElementById('cert-text').innerHTML = t[lang].cert;
     document.getElementById('subtitle').innerText = t[lang].sub;
     document.getElementById('header-text').innerHTML = t[lang].h;
     document.getElementById('sec-profile').innerText = t[lang].p;
-    document.getElementById('sec-value').innerText = t[lang].v;
-    document.getElementById('sec-keys').innerText = t[lang].k;
-    document.getElementById('card-title-1').innerText = t[lang].c1t;
-    document.getElementById('card-desc-1').innerText = t[lang].c1d;
-    document.getElementById('card-title-2').innerText = t[lang].c2t;
-    document.getElementById('card-desc-2').innerText = t[lang].c2d;
-    document.getElementById('card-title-3').innerText = t[lang].c3t;
-    document.getElementById('card-desc-3').innerText = t[lang].c3d;
-    document.getElementById('card-title-4').innerText = t[lang].c4t;
-    document.getElementById('card-desc-4').innerText = t[lang].c4d;
-    document.getElementById('card-title-5').innerText = t[lang].c5t;
-    document.getElementById('card-desc-5').innerText = t[lang].c5d;
-    document.getElementById('list-1').innerHTML = t[lang].l1;
-    document.getElementById('list-2').innerHTML = t[lang].l2;
+    document.getElementById('sec-media').innerText = t[lang].m;
     document.getElementById('footer-text').innerText = t[lang].f;
   }
 </script>
