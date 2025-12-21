@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,87 +11,99 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: linear-gradient(180deg, #020617, var(--bg));
-      color: var(--text); line-height: 1.5;
+      color: var(--text); line-height: 1.6;
     }
     header, section { max-width: 1100px; margin: auto; padding: 2rem; }
     header { padding-top: 4rem; }
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 1.1rem; color: var(--primary); margin-top: 0.5rem; font-weight: 500; }
-    header p { margin-top: 1rem; color: var(--muted); font-size: 0.95rem; }
-    h3 { margin-bottom: 1.5rem; color: var(--secondary); border-bottom: 1px solid #1e293b; padding-bottom: 0.5rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    h1 { font-size: 3rem; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+    h2 { font-size: 1.2rem; color: var(--primary); margin-top: 0.8rem; font-weight: 500; }
+    header p { margin-top: 1.5rem; color: var(--muted); font-size: 1.05rem; max-width: 850px; }
+    h3 { margin-bottom: 2rem; color: var(--secondary); border-left: 3px solid var(--secondary); padding-left: 1rem; font-size: 1.4rem; }
+    
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
     .card {
-      background: rgba(17, 24, 39, 0.6); border-radius: 12px; padding: 1.2rem;
-      border: 1px solid #1e293b; transition: 0.3s;
+      background: rgba(17, 24, 39, 0.7); border-radius: 16px; padding: 1.8rem;
+      border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease;
     }
-    .card:hover { border-color: var(--primary); transform: translateY(-3px); }
-    h4 { margin-bottom: 0.5rem; font-size: 1rem; color: #fff; }
-    .card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+    .card:hover { border-color: var(--primary); transform: translateY(-4px); background: rgba(17, 24, 39, 0.9); }
+    h4 { margin-bottom: 0.8rem; font-size: 1.1rem; color: #fff; }
+    .card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.2rem; }
+    
     .badge { 
-      display: inline-block; margin: 2px; padding: 0.2rem 0.5rem; 
+      display: inline-block; margin: 2px; padding: 0.3rem 0.6rem; 
       font-size: 0.75rem; border-radius: 6px; background: rgba(56,189,248,0.1); color: var(--primary); 
+      border: 1px solid rgba(56,189,248,0.1);
     }
     .cta { 
-      display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; 
+      display: inline-block; margin-top: 2rem; padding: 0.8rem 1.8rem; 
       border-radius: 50px; background: linear-gradient(90deg, var(--primary), var(--secondary)); 
-      color: #020617; font-weight: 600; text-decoration: none; font-size: 0.85rem;
+      color: #020617; font-weight: 700; text-decoration: none; font-size: 0.9rem; transition: 0.2s;
     }
-    ul { list-style: none; font-size: 0.85rem; }
-    li { margin-bottom: 0.4rem; color: var(--muted); }
-    footer { padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; opacity: 0.7; }
-    .lang-switch { text-align: right; padding: 1rem 2rem; }
-    .lang-switch button { background: #1e293b; color: white; border: none; padding: 0.3rem 0.6rem; cursor: pointer; border-radius: 4px; margin-left: 5px; }
+    .cta:hover { filter: brightness(1.1); transform: scale(1.02); }
+    
+    ul { list-style: none; font-size: 0.9rem; }
+    li { margin-bottom: 0.6rem; color: var(--text); display: flex; align-items: flex-start; gap: 8px; }
+    li::before { content: "•"; color: var(--primary); font-weight: bold; }
+
+    footer { padding: 4rem 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05); }
+    
+    .lang-switch { text-align: right; padding: 1.5rem 2rem; }
+    .lang-btn { 
+      background: rgba(56, 189, 248, 0.15); color: var(--primary); 
+      border: 1px solid var(--primary); padding: 0.5rem 1rem; cursor: pointer; 
+      border-radius: 8px; margin-left: 10px; font-weight: 600; transition: 0.3s;
+    }
+    .lang-btn:hover { background: var(--primary); color: #000; }
   </style>
 </head>
 <body>
 
 <div class="lang-switch">
-  <button onclick="switchLang('en')">EN</button>
-  <button onclick="switchLang('it')">IT</button>
+  <button class="lang-btn" onclick="switchLang('en')">English</button>
+  <button class="lang-btn" onclick="switchLang('it')">Italiano</button>
 </div>
 
 <header>
   <h1>Carmine D'Alise</h1>
-  <h2>Digital Lead & Technical Operations Specialist</h2>
+  <h2 id="subtitle">Digital Lead | Full Stack Developer | Technical Project Manager</h2>
   <p id="header-text">
-    Executive professional with 20+ years of international experience in cruise ships and luxury hospitality. 
-    Specialized in IT operations, digital media, and AI-driven solutions. Currently pursuing a Master in AI & Intelligent Agents.
+    Executive professional with over 20 years of international experience across cruise ships, luxury hospitality, and land-based environments. Specialized in digital media, IT operations, and service support, delivering reliable and scalable solutions.
   </p>
-  <div style="display: flex; gap: 10px;">
-    <a class="cta" href="https://github.com/iacreatorcar" target="_blank">GitHub</a>
-    <a class="cta" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank">LinkedIn</a>
+  <div style="display: flex; gap: 15px;">
+    <a class="cta" href="https://github.com/iacreatorcar" target="_blank" id="github-btn">GitHub</a>
+    <a class="cta" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank" id="linkedin-btn">LinkedIn</a>
   </div>
 </header>
 
 <section>
-  <h3 id="sec-profile">Professional Profile</h3>
+  <h3 id="sec-profile">Professional Identity</h3>
   <div class="grid">
     <div class="card">
-      <h4>Digital Media & Content</h4>
-      <p>Interactive signage and web platforms for guest experience.</p>
-      <div class="badge">CMS</div> <div class="badge">Digital Signage</div> <div class="badge">React</div>
+      <h4 id="card-title-1">Digital media & content</h4>
+      <p id="card-desc-1">Management of multimedia content and interactive platforms for guest experience.</p>
+      <div class="badge">CMS</div> <div class="badge">Digital Signage</div> <div class="badge">React</div> <div class="badge">Kiosks</div>
     </div>
     <div class="card">
-      <h4>Technical Operations</h4>
-      <p>Operational continuity for AV/IT systems and startups.</p>
-      <div class="badge">AV Systems</div> <div class="badge">Networking</div> <div class="badge">Service Mgmt</div>
+      <h4 id="card-title-2">Technical operations</h4>
+      <p id="card-desc-2">System reliability and hands-on technical support for AV and networking.</p>
+      <div class="badge">AV Systems</div> <div class="badge">Networking</div> <div class="badge">StarDraw</div> <div class="badge">Troubleshooting</div>
     </div>
     <div class="card">
-      <h4>Project & AI Lead</h4>
-      <p>Leadership of complex rollouts and AI automation.</p>
-      <div class="badge">Agile</div> <div class="badge">AI Agents</div> <div class="badge">Stakeholders</div>
+      <h4 id="card-title-3">Project & AI lead</h4>
+      <p id="card-desc-3">Leadership of complex digital rollouts and AI automation workflows.</p>
+      <div class="badge">Agile</div> <div class="badge">AI Agents</div> <div class="badge">Stakeholders</div> <div class="badge">Delivery</div>
     </div>
     <div class="card">
-      <h4>Full-Stack Dev</h4>
-      <p>Backend architectures and automation workflows.</p>
-      <div class="badge">Node.js</div> <div class="badge">Python</div> <div class="badge">n8n</div> <div class="badge">API</div>
-    </div>
-    <div class="card">
-      <h4>Design & UX</h4>
-      <p>Visual design and user interface prototyping.</p>
+      <h4 id="card-title-4">Front-end design & UX</h4>
+      <p id="card-desc-4">Interface design and prototyping focused on user experience.</p>
       <div class="badge">Canva</div> <div class="badge">Figma</div> <div class="badge">Adobe</div>
+    </div>
+    <div class="card">
+      <h4 id="card-title-5">Back-end & development</h4>
+      <p id="card-desc-5">Architecture of server-side solutions and automation integrations.</p>
+      <div class="badge">Node.js</div> <div class="badge">Python</div> <div class="badge">n8n</div> <div class="badge">APIs</div>
     </div>
   </div>
 </section>
@@ -100,50 +112,88 @@
   <h3 id="sec-value">Value Proposition</h3>
   <div class="grid">
     <div class="card">
-      <ul>
-        <li>✔ International rotational contract specialist</li>
-        <li>✔ Deep maritime & hospitality tech expertise</li>
-        <li>✔ Bridge between technical teams and management</li>
+      <ul id="list-1">
+        <li>International rotational contract specialist</li>
+        <li>Deep maritime and hospitality technology expertise</li>
+        <li>Operational mindset with strategic leadership</li>
       </ul>
     </div>
     <div class="card">
-      <ul>
-        <li>✔ AI-driven automation for efficiency</li>
-        <li>✔ Resilient systems for low-connectivity</li>
-        <li>✔ Strategic vision with operational hands-on</li>
+      <ul id="list-2">
+        <li>AI-driven automation and efficiency optimization</li>
+        <li>Resilient systems for low-connectivity environments</li>
+        <li>Effective bridge between technical teams and management</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section>
-  <h3>Key Systems</h3>
-  <div class="card" style="width: 100%;">
-    <p style="font-size: 0.8rem;">
-      <strong>Platforms:</strong> Sanity · Liferay · SourceToad · Samsung VXT · LG Pro:Centric · StarDraw AV · Dante AV · Crestron · Control4
+  <h3 id="sec-keys">Key Systems & Brands</h3>
+  <div class="card" style="width: 100%; border-left: 4px solid var(--primary);">
+    <p style="font-size: 0.95rem; line-height: 1.8;">
+      <strong>Core Platforms:</strong> Sanity | Liferay | Samsung MagicInfo VXT | LG Pro:Centric | StarDraw AV | Dante AV Networking | Crestron | Control4 | Starlink | HPE | 5G Satellite Systems | <strong>Otalio</strong>
     </p>
   </div>
 </section>
 
-<footer>
-  © 2025 Carmine D'Alise · Digital Lead · Digital Media Expert
+<footer id="footer-text">
+  © 2025 Carmine D'Alise | Digital Lead | Digital Media Expert
 </footer>
 
 <script>
   function switchLang(lang) {
     const t = {
       en: {
-        h: "Executive professional with 20+ years of international experience in cruise ships and luxury hospitality. Specialized in IT operations, digital media, and AI-driven solutions.",
-        p: "Professional Profile", v: "Value Proposition"
+        sub: "Digital Lead | Full Stack Developer | Technical Project Manager",
+        h: "Executive professional with over 20 years of international experience across cruise ships, luxury hospitality, and land-based environments. Specialized in digital media, IT operations, and service support, delivering reliable and scalable solutions.",
+        p: "Professional Identity",
+        v: "Value Proposition",
+        k: "Key Systems & Brands",
+        c1t: "Digital media & content", c1d: "Management of multimedia content and interactive platforms for guest experience.",
+        c2t: "Technical operations", c2d: "System reliability and hands-on technical support for AV and networking.",
+        c3t: "Project & AI lead", c3d: "Leadership of complex digital rollouts and AI automation workflows.",
+        c4t: "Front-end design & UX", c4d: "Interface design and prototyping focused on user experience.",
+        c5t: "Back-end & development", c5d: "Architecture of server-side solutions and automation integrations.",
+        l1: "<li>International rotational contract specialist</li><li>Deep maritime and hospitality technology expertise</li><li>Operational mindset with strategic leadership</li>",
+        l2: "<li>AI-driven automation and efficiency optimization</li><li>Resilient systems for low-connectivity environments</li><li>Effective bridge between technical teams and management</li>",
+        f: "© 2025 Carmine D'Alise | Digital Lead | Digital Media Expert"
       },
       it: {
-        h: "Professionista con oltre 20 anni di esperienza internazionale in navi da crociera e ospitalità di lusso. Specializzato in operazioni IT, media digitali e soluzioni AI.",
-        p: "Profilo Professionale", v: "Valore per l'azienda"
+        sub: "Digital Lead | Sviluppatore Full Stack | Technical Project Manager",
+        h: "Professionista con oltre 20 anni di esperienza internazionale in navi da crociera, ospitalità di lusso e contesti terrestri. Specializzato in media digitali, operazioni IT e supporto tecnico, fornendo soluzioni affidabili e scalabili.",
+        p: "Identità Professionale",
+        v: "Proposta di Valore",
+        k: "Sistemi Chiave & Brand",
+        c1t: "Media digitali e contenuti", c1d: "Gestione di contenuti multimediali e piattaforme interattive per l'esperienza ospite.",
+        c2t: "Operazioni tecniche", c2d: "Affidabilità del sistema e supporto tecnico pratico per AV e networking.",
+        c3t: "Project & AI lead", c3d: "Leadership di rollout digitali complessi e flussi di automazione AI.",
+        c4t: "Design front-end & UX", c4d: "Design dell'interfaccia e prototipazione focalizzati sull'esperienza utente.",
+        c5t: "Back-end & sviluppo", c5d: "Architettura di soluzioni lato server e integrazioni di automazione.",
+        l1: "<li>Specialista in contratti rotazionali internazionali</li><li>Profonda competenza tecnologica marittima e alberghiera</li><li>Mentalità operativa con leadership strategica</li>",
+        l2: "<li>Automazione basata su AI e ottimizzazione dell'efficienza</li><li>Sistemi resilienti per ambienti a bassa connettività</li><li>Ponte efficace tra team tecnici e management</li>",
+        f: "© 2025 Carmine D'Alise | Digital Lead | Esperto Media Digitali"
       }
     };
-    document.getElementById('header-text').innerText = t[lang].h;
+    
+    document.getElementById('subtitle').innerText = t[lang].sub;
+    document.getElementById('header-text').innerHTML = t[lang].h;
     document.getElementById('sec-profile').innerText = t[lang].p;
     document.getElementById('sec-value').innerText = t[lang].v;
+    document.getElementById('sec-keys').innerText = t[lang].k;
+    document.getElementById('card-title-1').innerText = t[lang].c1t;
+    document.getElementById('card-desc-1').innerText = t[lang].c1d;
+    document.getElementById('card-title-2').innerText = t[lang].c2t;
+    document.getElementById('card-desc-2').innerText = t[lang].c2d;
+    document.getElementById('card-title-3').innerText = t[lang].c3t;
+    document.getElementById('card-desc-3').innerText = t[lang].c3d;
+    document.getElementById('card-title-4').innerText = t[lang].c4t;
+    document.getElementById('card-desc-4').innerText = t[lang].c4d;
+    document.getElementById('card-title-5').innerText = t[lang].c5t;
+    document.getElementById('card-desc-5').innerText = t[lang].c5d;
+    document.getElementById('list-1').innerHTML = t[lang].l1;
+    document.getElementById('list-2').innerHTML = t[lang].l2;
+    document.getElementById('footer-text').innerText = t[lang].f;
   }
 </script>
 
