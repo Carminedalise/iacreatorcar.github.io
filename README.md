@@ -1,5 +1,3 @@
-# iacreatorcar.github.io
-
 https://carminedalise.github.io/iacreatorcar.github.io/
 
 Versatile professional with over 20 years of experience in technical, digital, and travel & tourism sectors. Recently focused on a Master-level specialization in **Artificial Intelligence and emerging technologies**, leveraging operational and management expertise to drive development solutions.
