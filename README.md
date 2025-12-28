@@ -22,7 +22,7 @@ Node.js, Ruby on Rails, Django, iOS/Android development, Visual Studio Code, AI 
 | Resource | Content Type | Link |
 
 |**GitHub Profile** | Overview of all my public repositories and contributions. 
-| https://github.com/iacreatorcar |  
+| https://carminedalise.github.io/iacreatorcar.github.io/ |  
 
 | **LinkedIn** | Professional profile and summary of 20+ years of experience. | Carmine D'Alise | 
 https://www.linkedin.com/in/carmine-d-alise-3b25024b/ |
