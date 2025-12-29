@@ -20,14 +20,25 @@
 
     header { padding-top: 3rem; text-align: center; }
 .logo { 
-    width: 180px; 
-    height: 180px; 
-    border-radius: 50%;
-    /* Crea un ritaglio circolare netto che elimina gli angoli bianchi */
-    clip-path: circle(50%); 
+    width: 200px;         /* Aumentiamo un po' la dimensione per compensare lo zoom */
+    height: 200px; 
+    border-radius: 50%;   /* Mantiene il contenitore tondo se vuoi, o rimuovilo per forma libera */
     
-    border: 8px solid #000000; /* Bordo più spesso per coprire bene */
-    object-fit: cover;
+    /* TRUCCO PER RIMUOVERE IL CERCHIO NERO: */
+    /* Usiamo una scala maggiore del 100% per "spingere" il bordo nero fuori dal contenitore visibile */
+    transform: scale(1.4); 
+    
+    /* Assicuriamoci che ciò che esce dai 200px venga tagliato */
+    overflow: hidden; 
+    
+    object-fit: contain;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto 2.5rem auto; /* Aumentato il margine per via della scala */
+    
+    /* Rimuoviamo ogni bordo nero aggiunto dal codice precedentemente */
+    border: none !important; 
+    outline: none !important;
 }
 Perché ora funzionerà:
 Sfondo Trasparente: Utilizzando il file logo.png che hai caricato, i pixel fuori dal cerchio nero non verranno renderizzati.
