@@ -20,23 +20,23 @@
 
     header { padding-top: 3rem; text-align: center; }
  .logo { 
-    width: 160px; /* Imposta la larghezza desiderata */
-    height: 160px; /* Mantieni altezza uguale alla larghezza */
-    border-radius: 50%; /* Rende il contenitore perfettamente circolare */
-    
-    /* Questo rimuove ogni spazio bianco esterno se l'immagine ha bordi trasparenti */
-    background-color: transparent; 
-    
-    /* Assicura che l'immagine riempia il cerchio senza mostrare lo sfondo bianco originale */
-    object-fit: cover; 
-    
-    /* Opzionale: se vuoi rinforzare il bordo nero via codice */
-    border: 2px solid #000000; 
-    
-    /* Centratura automatica nel caso servisse */
+    width: 180px;         /* Dimensione del logo */
+    height: 180px; 
+    border-radius: 50%;   /* Maschera circolare perfetta */
+    object-fit: contain;  /* Mantiene le proporzioni del tuo logo PNG */
+    background-color: transparent; /* Forza lo sfondo trasparente */
     display: block;
-    margin: 0 auto 1.5rem auto; 
+    margin: 0 auto 1.5rem auto;
+    
+    /* Se vuoi un ulteriore bordo nero sottile generato dal codice */
+    border: 1px solid #000000; 
 }
+Perché ora funzionerà:
+Sfondo Trasparente: Utilizzando il file logo.png che hai caricato, i pixel fuori dal cerchio nero non verranno renderizzati.
+
+Object-fit: contain: Questa proprietà assicura che l'intero logo (inclusa la scritta "Project Manager & Digital Lead") sia visibile all'interno del cerchio senza essere tagliato.
+
+Rimozione del Bianco: Il problema nell'immagine image_88e087.png era dovuto al fatto che l'immagine precedente non aveva la trasparenza negli angoli; questo nuovo file risolve il problema alla radice.
     
     h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 0.5rem; }
     h2 { font-size: 1.2rem; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; }
