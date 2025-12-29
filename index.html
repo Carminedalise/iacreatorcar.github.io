@@ -20,16 +20,20 @@
 
     header { padding-top: 3rem; text-align: center; }
  .logo { 
-    width: 180px;         /* Dimensione del logo */
+    width: 180px; 
     height: 180px; 
-    border-radius: 50%;   /* Maschera circolare perfetta */
-    object-fit: contain;  /* Mantiene le proporzioni del tuo logo PNG */
-    background-color: transparent; /* Forza lo sfondo trasparente */
+    border-radius: 50%; 
+    object-fit: cover; 
     display: block;
     margin: 0 auto 1.5rem auto;
-    
-    /* Se vuoi un ulteriore bordo nero sottile generato dal codice */
-    border: 1px solid #000000; 
+    background-color: transparent;
+
+    /* 1. Aumentiamo il bordo esterno */
+    border: 6px solid #000000; 
+
+    /* 2. Spingiamo un bordo interno per coprire il bianco residuo */
+    outline: 4px solid #000000;
+    outline-offset: -4px; /* Questo sposta il nero verso l'interno dell'immagine */
 }
 Perché ora funzionerà:
 Sfondo Trasparente: Utilizzando il file logo.png che hai caricato, i pixel fuori dal cerchio nero non verranno renderizzati.
