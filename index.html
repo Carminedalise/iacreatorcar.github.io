@@ -19,21 +19,15 @@
     .lang-switch button:hover { border-color: var(--primary); color: var(--primary); }
 
     header { padding-top: 3rem; text-align: center; }
- .logo { 
+.logo { 
     width: 180px; 
     height: 180px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    display: block;
-    margin: 0 auto 1.5rem auto;
-    background-color: transparent;
-
-    /* 1. Aumentiamo il bordo esterno */
-    border: 6px solid #000000; 
-
-    /* 2. Spingiamo un bordo interno per coprire il bianco residuo */
-    outline: 4px solid #000000;
-    outline-offset: -4px; /* Questo sposta il nero verso l'interno dell'immagine */
+    border-radius: 50%;
+    /* Crea un ritaglio circolare netto che elimina gli angoli bianchi */
+    clip-path: circle(50%); 
+    
+    border: 8px solid #000000; /* Bordo più spesso per coprire bene */
+    object-fit: cover;
 }
 Perché ora funzionerà:
 Sfondo Trasparente: Utilizzando il file logo.png che hai caricato, i pixel fuori dal cerchio nero non verranno renderizzati.
