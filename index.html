@@ -20,21 +20,29 @@
 
     header { padding-top: 3rem; text-align: center; }
 .logo { 
-    width: 220px;         /* Aumentato per dare risalto al nome */
-    height: auto;         /* Mantiene le proporzioni naturali del logo */
-    border-radius: 0;     /* Rimosso il cerchio, lasciamo la forma libera del logo */
-    object-fit: contain; 
+    width: 150px;         /* Dimensione contenuta ed elegante */
+    height: 150px; 
+    border-radius: 50%;   /* Mantiene la forma circolare */
+    object-fit: contain;  /* Protegge le proporzioni del logo DC */
     display: block;
     margin: 0 auto 1.5rem auto;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.03); /* Un fondo leggerissimo per dare profondità */
     
-    /* EFFETTI PER RISALTO: */
-    /* Crea un leggero bagliore per far "staccare" le scritte oro/verdi dallo sfondo */
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15)); 
+    /* IL CERCHIO: Sottile, elegante e luminoso (colore azzurro/cyan come il tuo stile) */
+    border: 2px solid rgba(56, 189, 248, 0.5); 
     
-    /* Animazione fluida al passaggio del mouse */
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
+    /* EFFETTO LUCE: Un leggero bagliore che mette in risalto l'oro e il verde */
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+    
+    padding: 10px;        /* Spazio interno tra il cerchio e il logo per non farlo soffocare */
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    /* Al passaggio del mouse, il cerchio diventa più vivido */
+    border-color: #38bdf8;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+    transform: scale(1.05);
 }
 
 .logo:hover {
