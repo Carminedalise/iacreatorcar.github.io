@@ -15,9 +15,9 @@ Skilled in software development, UX/UI design, AV & networking systems, and lead
 
 ### 🏗️ Infrastructure & DevOps (New Skills)
 
-* **Containerization:** Progettazione e gestione di ambienti isolati tramite **Docker**.
-* **Web Serving:** Deployment di applicazioni web tramite **Nginx** su architetture Alpine Linux.
-* **Cloud Distribution:** Gestione del ciclo di vita delle immagini (Tagging/Pushing) su **Docker Hub**.
+* **Containerization:** Designing and managing isolated environments using **Docker**.
+* **Web Serving:** Deployment of web applications via **Nginx** on Alpine Linux architectures.
+* **Cloud Distribution:** Image lifecycle management (Tagging/Pushing) on **Docker Hub**.
 
 ### 💻 Technical Proficiency
 
@@ -27,7 +27,7 @@ Node.js, Ruby on Rails, Django, iOS/Android development, Visual Studio Code, AI 
 
 | Resource | Content Type | Link |
 | :--- | :--- | :--- |
-| **Live Portfolio** | Visualizzazione diretta del mio sito personale. | [iacreatorcar.github.io](https://iacreatorcar.github.io/) |
-| **Docker Hub** | Immagini containerizzate pronte al deployment (Nginx-based). | [iacreator/portfolio-web](https://hub.docker.com/r/iacreator/portfolio-web) |
-| **GitHub Profile** | Codice sorgente e contributi pubblici. | [github.com/iacreatorcar](https://github.com/iacreatorcar) |
-| **LinkedIn** | Profilo professionale e 20+ anni di carriera. | [Carmine D'Alise](https://www.linkedin.com/in/carmine-d-alise-3b25024b/) |
+| **Live Portfolio** | Direct visual access to my personal website. | [iacreatorcar.github.io](https://iacreatorcar.github.io/) |
+| **Docker Hub** | Containerized images ready for deployment (Nginx-based). | [iacreator/portfolio-web](https://hub.docker.com/r/iacreator/portfolio-web) |
+| **GitHub Profile** | Source code and public contributions. | [github.com/iacreatorcar](https://github.com/iacreatorcar) |
+| **LinkedIn** | Professional profile and 20+ years of career history. | [Carmine D'Alise](https://www.linkedin.com/in/carmine-d-alise-3b25024b/) |
