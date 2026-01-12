@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carmine D'Alise | Technical Operations | Digital Lead</title>
+    <title>Carmine D'Alise | Strategic Technical Consultant</title>
     <style>
         :root {
             --bg: #020617; --card: #0f172a; --primary: #38bdf8;
@@ -18,50 +18,46 @@
         .lang-switch button { background: none; border: 1px solid var(--muted); color: var(--muted); padding: 5px 12px; cursor: pointer; border-radius: 4px; font-size: 0.75rem; font-weight: bold; transition: 0.3s; margin-left: 5px; }
         .lang-switch button:hover { border-color: var(--primary); color: var(--primary); }
 
-        header { padding-top: 3rem; text-align: center; }
+        header { padding-top: 2rem; text-align: center; }
         .logo { 
-            width: 150px; height: 150px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 1.5rem auto;
+            width: 140px; height: 140px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 1.5rem auto;
             background-color: rgba(255, 255, 255, 0.03); border: 2px solid var(--primary);
             box-shadow: 0 0 15px rgba(56, 189, 248, 0.2); padding: 5px;
         }
         
         h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 0.5rem; }
-        .subtitle { font-size: 1.2rem; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; font-weight: bold; }
+        .subtitle { font-size: 1.1rem; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; font-weight: bold; }
 
-        .intro-quote { background: rgba(56, 189, 248, 0.05); border-left: 4px solid var(--primary); padding: 1.5rem; margin: 2rem 0; border-radius: 0 12px 12px 0; font-style: italic; color: var(--muted); text-align: left; }
-
-        /* Roadmap Style */
-        .roadmap { display: flex; justify-content: space-around; align-items: center; background: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; border: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; gap: 1rem; }
+        .roadmap { display: flex; justify-content: space-around; align-items: center; background: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 1.2rem; margin: 2rem 0; border: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; gap: 1rem; }
         .step { display: flex; flex-direction: column; align-items: center; gap: 5px; }
-        .step-icon { font-size: 1.5rem; }
-        .step-title { font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase; white-space: nowrap; }
+        .step-icon { font-size: 1.3rem; }
+        .step-title { font-size: 0.7rem; font-weight: 700; color: var(--primary); text-transform: uppercase; }
 
-        .cta-container { display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap; justify-content: center; }
-        .cta { padding: 0.8rem 1.8rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+        .cta-container { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+        .cta { padding: 0.7rem 1.5rem; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.8rem; transition: 0.2s; }
         .cta-primary { background: var(--primary); color: #020617; }
-        .cta-docker { background: #2496ed; color: white; }
         .cta-secondary { border: 1px solid var(--muted); color: var(--text); }
 
-        h3 { margin: 3rem 0 1.5rem 0; color: var(--secondary); font-size: 1.4rem; display: flex; align-items: center; gap: 10px; text-transform: uppercase; }
+        h3 { margin: 3rem 0 1.5rem 0; color: var(--secondary); font-size: 1.3rem; display: flex; align-items: center; gap: 10px; text-transform: uppercase; }
         h3::after { content: ""; flex: 1; height: 1px; background: rgba(255,255,255,0.1); }
 
-        .matrix-container { background: var(--card); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 2.5rem; }
+        .matrix-container { background: var(--card); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 2rem; }
         .matrix-table { width: 100%; border-collapse: collapse; }
-        .matrix-table th { background: rgba(255,255,255,0.03); color: var(--primary); text-align: left; padding: 12px 20px; font-size: 0.75rem; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .matrix-table td { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
-        .tag { background: rgba(34, 197, 94, 0.15); color: var(--secondary); padding: 3px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-right: 6px; display: inline-block; margin-bottom: 4px; }
+        .matrix-table th { background: rgba(255,255,255,0.03); color: var(--primary); text-align: left; padding: 12px 20px; font-size: 0.7rem; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .matrix-table td { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.85rem; vertical-align: top; }
+        .tag { background: rgba(56, 189, 248, 0.1); color: var(--primary); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; margin-right: 5px; display: inline-block; margin-bottom: 5px; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
-        .card { background: var(--card); border-radius: 12px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; height: 100%; display: flex; flex-direction: column; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+        .card { background: var(--card); border-radius: 12px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; display: flex; flex-direction: column; }
         .card:hover { border-color: var(--primary); transform: translateY(-5px); }
         .card h4 { color: #fff; margin-bottom: 0.8rem; font-size: 1.1rem; }
-        .card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 12px; flex-grow: 1; }
+        .card p { font-size: 0.8rem; color: var(--muted); margin-bottom: 15px; flex-grow: 1; }
         
-        .card-links { display: flex; gap: 8px; margin-top: auto; padding-top: 10px; flex-wrap: wrap; }
-        .card-link { font-size: 0.7rem; text-decoration: none; padding: 5px 10px; border-radius: 4px; border: 1px solid var(--primary); color: var(--primary); transition: 0.3s; font-weight: bold; }
+        .card-links { display: flex; gap: 8px; margin-top: auto; }
+        .card-link { font-size: 0.7rem; text-decoration: none; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--primary); color: var(--primary); transition: 0.3s; font-weight: bold; text-transform: uppercase; }
         .card-link:hover { background: var(--primary); color: #020617; }
 
-        footer { padding: 4rem 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        footer { padding: 4rem 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); }
     </style>
 </head>
 <body>
@@ -74,53 +70,57 @@
 <header>
     <img src="assets/logo.jpg" alt="Carmine D'Alise" class="logo">
     <h1>Carmine D'Alise</h1>
-    <div class="subtitle" id="subtitle">Technical Operations | Digital Lead | Full-Stack Developer</div>
+    <div class="subtitle" id="subtitle">Strategic Technical Consultant | Digital Operations Lead</div>
     
-    <div class="intro-quote" id="intro-text">
-        "I'm a passionate technical professional with a strong background in multimedia and web technology. With experience in the cruise industry, I've developed a unique blend of technical and creative skills that enable me to deliver innovative solutions."
-    </div>
-
     <div class="roadmap">
-        <div class="step"><span class="step-icon">🔊</span><span class="step-title">Sound Tech</span></div>
-        <div class="step"><span class="step-icon">🎥</span><span class="step-title">AV & Multimedia</span></div>
-        <div class="step"><span class="step-icon">🏗️</span><span class="step-title">Site Manager</span></div>
-        <div class="step"><span class="step-icon">💻</span><span class="step-title">Full Stack Dev</span></div>
-        <div class="step"><span class="step-icon">🚀</span><span class="step-title">Digital Lead</span></div>
+        <div class="step"><span class="step-icon">💡</span><span class="step-title">Strategy</span></div>
+        <div class="step"><span class="step-icon">🎥</span><span class="step-title">Multimedia</span></div>
+        <div class="step"><span class="step-icon">🏨</span><span class="step-title">Hospitality</span></div>
+        <div class="step"><span class="step-icon">👥</span><span class="step-title">UX Expert</span></div>
+        <div class="step"><span class="step-icon">🚀</span><span class="step-title">Operations</span></div>
     </div>
 
     <div class="cta-container">
-        <a class="cta cta-primary" href="https://github.com/iacreatorcar" target="_blank">GitHub Projects</a>
-        <a class="cta cta-docker" href="https://hub.docker.com/u/iacreator" target="_blank">Docker Hub</a>
-        <a class="cta cta-secondary" href="mailto:c.dalise@live.com">Email Contact</a>
+        <a class="cta cta-primary" href="https://github.com/iacreatorcar" target="_blank">View GitHub</a>
+        <a class="cta cta-secondary" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank">LinkedIn</a>
     </div>
 </header>
 
 <section>
-    <h3 id="sec-it">Technical Operations & Systems Matrix</h3>
+    <h3 id="sec-skills">Core Expertise & Skills</h3>
     <div class="matrix-container">
         <table class="matrix-table">
             <thead>
                 <tr>
-                    <th id="th-cat">Categoria</th>
-                    <th id="th-tool">Tools & Ecosystem</th>
-                    <th id="th-focus">Focus</th>
+                    <th id="th-cat">Domain</th>
+                    <th id="th-tool">Technology Stack</th>
+                    <th id="th-soft">Strategy & Leadership</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Smart TV & IPTV</strong></td>
-                    <td><span class="tag">LG Pro:Centric</span><span class="tag">Samsung VXT</span><span class="tag">Hotel Mode</span><span class="tag">MagicInfo</span></td>
-                    <td id="f1">Configurazione Tenant, troubleshooting sistemistico, gestione Cloud/Server e Broadcast TV.</td>
+                    <td><strong>Hospitality Tech</strong></td>
+                    <td>
+                        <span class="tag">Samsung VXT</span><span class="tag">IPTV</span><span class="tag">Hotel Mode</span>
+                        <span class="tag">Starlink</span><span class="tag">CMS Integration</span><span class="tag">API Env</span>
+                    </td>
+                    <td id="s1">User Experience (UX) design, multicultural operations, strategic time management.</td>
                 </tr>
                 <tr>
-                    <td><strong>Automation</strong></td>
-                    <td><span class="tag">XControl</span><span class="tag">Crestron</span><span class="tag">Extron</span><span class="tag">AMX</span></td>
-                    <td id="f2">Programmazione avanzata per sistemi di controllo, Home Automation e Room Control.</td>
+                    <td><strong>Operations & DevOps</strong></td>
+                    <td>
+                        <span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">GitHub</span>
+                        <span class="tag">Bash</span><span class="tag">PowerShell</span><span class="tag">JSON</span>
+                    </td>
+                    <td id="s2">Management di squadra (25+ staff), coordinamento tecnico, lavoro sotto stress.</td>
                 </tr>
                 <tr>
-                    <td><strong>DevOps & Web</strong></td>
-                    <td><span class="tag">Docker</span><span class="tag">Nginx</span><span class="tag">Git/GitHub</span><span class="tag">Python</span></td>
-                    <td id="f3">Containerizzazione architetture, CI/CD Workflow, Full-Stack Dev e integrazione API.</td>
+                    <td><strong>Strategic Design</strong></td>
+                    <td>
+                        <span class="tag">Canva Strategy</span><span class="tag">React</span><span class="tag">Python</span>
+                        <span class="tag">HTML/CSS/JS</span><span class="tag">FastAPI</span><span class="tag">MongoDB</span>
+                    </td>
+                    <td id="s3">Raggiungimento obiettivi aziendali, brand activation, leadership di progetto.</td>
                 </tr>
             </tbody>
         </table>
@@ -128,122 +128,92 @@
 </section>
 
 <section>
-    <h3 id="sec-exp">Core Portfolio & Professional Experience</h3>
+    <h3 id="sec-projects">Portfolio Showcases</h3>
     <div class="grid">
-        <div class="card" style="border: 1px solid var(--accent);">
-            <h4 id="t8">Visual Design & Media Portfolio 🎨</h4>
-            <p id="d8">Showcase interattivo su Canva del mio lavoro creativo e front-end. Esplorazione tecnica di design applicato al digital marketing con focus su UX/UI.</p>
-            <div class="card-links">
-                <a href="https://www.canva.com/design/DAGFNejoyL4/5MlHThgTRUWJmlbR2o-33g/edit?utm_content=DAGFNejoyL4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="card-link" id="canva-btn">Vedi Portfolio Canva →</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <h4 id="t1">Digital Experience Lead - Aroya Cruises</h4>
-            <p id="d1">Technical Operations e gestione CMS (Get Slash). Implementazione di SOP digitali e monitoraggio connettività Starlink.</p>
-        </div>
-
         <div class="card" style="border-top: 3px solid var(--primary);">
-            <h4 id="t2">Multimedia Manager - MSC Cruises</h4>
-            <p id="d2">Amministrazione infrastrutture IPTV e Server Windows/Apple. Deploy di ecosistemi digitali complessi su navi internazionali.</p>
+            <h4 id="t1">Sea-Services CMS 🚢</h4>
+            <p id="d1">Consulenza strategica per l'Hospitality di bordo. Una soluzione che unisce tecnologia AI e User Experience per il settore crocieristico.</p>
+            <div class="card-links">
+                <a href="https://sea-services.emergent.host" target="_blank" class="card-link">Live Project →</a>
+            </div>
         </div>
 
-        <div class="card" style="border: 1px solid var(--secondary);">
-            <h4 id="t5">Full-Stack Development & AI</h4>
-            <p id="d5">Sviluppo di soluzioni scalabili con progettazione API (Swagger) orientate all'efficienza operativa.</p>
+        <div class="card" style="border-top: 3px solid var(--accent);">
+            <h4 id="t2">Visual Media Portfolio 🎨</h4>
+            <p id="d2">Showcase delle strategie di comunicazione visuale e digital marketing. Focus su UX/UI applicata ai servizi hospitality.</p>
             <div class="card-links">
-                <a href="https://sea-services.emergent.host" target="_blank" class="card-link">Live Demo →</a>
+                <a href="https://www.canva.com/design/DAGFNejoyL4/5MlHThgTRUWJmlbR2o-33g/view" target="_blank" class="card-link">Explore Canva →</a>
             </div>
         </div>
 
         <div class="card">
-            <h4 id="t7">Docker & Systems Engineering</h4>
-            <p id="d7">Gestione ambienti containerizzati. Troubleshooting tecnico ad alto livello in scenari mission-critical.</p>
+            <h4 id="t3">Technical SOP Guide 📺</h4>
+            <p id="d3">Definizione di Standard Operating Procedures per la manutenzione tecnica multimediale e la gestione degli SLA.</p>
             <div class="card-links">
-                <a href="https://hub.docker.com/u/iacreator" target="_blank" class="card-link">Docker Hub →</a>
+                <a href="https://iacreatorcar.github.io/Tv-Cabin-Sop/" target="_blank" class="card-link">GitHub Docs →</a>
             </div>
         </div>
 
         <div class="card">
-            <h4 id="t4">Site Manager - C.NSat SRL</h4>
-            <p id="d4">Coordinamento tecnico di cantiere, gestione budget e interfaccia strategica tra ingegneria e architetti.</p>
+            <h4 id="t4">Operational Automation 🥝</h4>
+            <p id="d4">Uso di Python e Docker per automatizzare i processi di test e validazione dei sistemi di bordo.</p>
+            <div class="card-links">
+                <a href="https://iacreatorcar.github.io/Kiwi-Automation-Project/" target="_blank" class="card-link">View Details →</a>
+            </div>
         </div>
     </div>
 </section>
 
 <footer>
-    © 2026 Carmine D'Alise | Technical Operations Specialist | c.dalise@live.com
+    © 2026 Carmine D'Alise | Senior Digital Lead | GitHub: iacreatorcar
 </footer>
 
 <script>
     const t = {
         en: {
-            sub: "Technical Operations | Digital Lead | Full-Stack Developer",
-            intro: "\"I'm a passionate technical professional with a strong background in multimedia and web technology. With experience in the cruise industry, I've developed a unique blend of technical and creative skills that enable me to deliver innovative solutions.\"",
-            secIt: "Technical Operations & Systems Matrix",
-            thCat: "Category", thTool: "Tools", thFocus: "Focus",
-            f1: "Tenant Config, System Troubleshooting, Cloud/Server Mgmt & Broadcast TV",
-            f2: "Advanced programming for control systems, Home Automation, and Room Control",
-            f3: "Architecture containerization, CI/CD Workflow, Full-Stack Dev, and API integration",
-            secExp: "Core Portfolio & Professional Experience",
-            t8: "Visual Design & Media Portfolio 🎨",
-            d8: "Interactive showcase of my creative and front-end work. Technical design exploration applied to digital marketing with a focus on UI/UX.",
-            t1: "Digital Experience Lead - Aroya Cruises",
-            d1: "Technical Operations and CMS management (Get Slash). Implementation of digital SOPs and Starlink monitoring.",
-            t2: "Multimedia Manager - MSC Cruises",
-            d2: "IPTV infrastructure and Windows/Apple Server administration. Deployment of complex digital ecosystems.",
-            t5: "Full-Stack Development & AI",
-            d5: "Development of scalable solutions with API design (Swagger) focused on operational efficiency.",
-            t7: "Docker & Systems Engineering",
-            d7: "Management of containerized environments. High-level technical troubleshooting in mission-critical scenarios.",
-            t4: "Site Manager - C.NSat SRL",
-            d4: "Technical site coordination, budget management, and strategic interface with architects.",
-            canvaBtn: "Open Canva Portfolio →"
+            sub: "Strategic Technical Consultant | Digital Operations Lead",
+            secSkills: "Core Expertise & Skills",
+            thCat: "Domain", thTool: "Technology Stack", thSoft: "Strategy & Leadership",
+            s1: "User Experience (UX) design, multicultural operations, strategic time management.",
+            s2: "Team management (25+ staff), technical coordination, work under pressure.",
+            s3: "Business goal achievement, brand activation, project leadership.",
+            secProjects: "Portfolio Showcases",
+            t1: "Sea-Services CMS 🚢", d1: "Strategic hospitality consulting for ships. A solution blending AI technology and UX for the cruise industry.",
+            t2: "Visual Media Portfolio 🎨", d2: "Visual communication and digital marketing strategies. Focus on UX/UI applied to hospitality services.",
+            t3: "Technical SOP Guide 📺", d3: "Standard Operating Procedures for multimedia maintenance and SLA management.",
+            t4: "Operational Automation 🥝", d4: "Using Python and Docker to automate testing processes and shipboard system validation."
         },
         it: {
-            sub: "Technical Operations | Digital Lead | Full-Stack Developer",
-            intro: "\"Professionista tecnico specializzato in Technical Operations e Digital Strategy. Grazie alla mia esperienza nel settore crocieristico, domino architetture complesse unendo problem solving hardware e sviluppo software scalabile.\"",
-            secIt: "Technical Operations & Systems Matrix",
-            thCat: "Categoria", thTool: "Strumenti", thFocus: "Focus",
-            f1: "Configurazione Tenant, Troubleshooting sistemistico, Gestione Cloud/Server e Broadcast TV",
-            f2: "Programmazione avanzata per sistemi di controllo, Home Automation e Room Control",
-            f3: "Containerizzazione architetture, CI/CD Workflow, Full-Stack Dev e integrazione API",
-            secExp: "Portfolio Core & Esperienze Professionali",
-            t8: "Visual Design & Media Portfolio 🎨",
-            d8: "Showcase interattivo del mio lavoro creativo e front-end. Esplorazione tecnica di design applicato al digital marketing con focus su UI/UX.",
-            t1: "Digital Experience Lead - Aroya Cruises",
-            d1: "Technical Operations e gestione CMS (Get Slash). Implementazione di SOP digitali e monitoraggio Starlink.",
-            t2: "Multimedia Manager - MSC Cruises",
-            d2: "Amministrazione infrastrutture IPTV e Server Windows/Apple. Deploy di ecosistemi digitali complessi.",
-            t5: "Sviluppo Full-Stack & AI",
-            d5: "Sviluppo di soluzioni scalabili con progettazione API (Swagger) orientate all'efficienza operativa.",
-            t7: "Docker & Systems Engineering",
-            d7: "Gestione ambienti containerizzati. Troubleshooting tecnico ad alto livello in scenari mission-critical.",
-            t4: "Site Manager - C.NSat SRL",
-            d4: "Coordinamento tecnico di cantiere, gestione budget e interfaccia strategica con architetti.",
-            canvaBtn: "Vedi Portfolio Canva →"
+            sub: "Consulente Tecnico Strategico | Digital Operations Lead",
+            secSkills: "Expertise Core & Skill",
+            thCat: "Dominio", thTool: "Tecnologie", thSoft: "Strategia & Leadership",
+            s1: "User Experience (UX) design, operazioni multiculturali, gestione strategica del tempo.",
+            s2: "Gestione team (25+ persone), coordinamento tecnico, lavoro sotto stress.",
+            s3: "Raggiungimento obiettivi business, brand activation, leadership di progetto.",
+            secProjects: "Showcase Portfolio",
+            t1: "Sea-Services CMS 🚢", d1: "Consulenza strategica per l'hospitality navale. Unione di tecnologia AI e UX per il settore crociere.",
+            t2: "Visual Media Portfolio 🎨", d2: "Strategie di comunicazione visiva e digital marketing. Focus su UX/UI per servizi hospitality.",
+            t3: "Guida SOP Tecnica 📺", d3: "Standard Operating Procedures per manutenzione multimediale e gestione degli SLA.",
+            t4: "Automazione Operativa 🥝", d4: "Utilizzo di Python e Docker per automatizzare i processi di test e validazione dei sistemi."
         }
     };
 
     function switchLang(lang) {
         document.getElementById('subtitle').innerText = t[lang].sub;
-        document.getElementById('intro-text').innerText = t[lang].intro;
-        document.getElementById('sec-it').innerText = t[lang].secIt;
-        document.getElementById('sec-exp').innerText = t[lang].secExp;
+        document.getElementById('sec-skills').innerText = t[lang].secSkills;
         document.getElementById('th-cat').innerText = t[lang].thCat;
         document.getElementById('th-tool').innerText = t[lang].thTool;
-        document.getElementById('th-focus').innerText = t[lang].thFocus;
-        document.getElementById('f1').innerText = t[lang].f1;
-        document.getElementById('f2').innerText = t[lang].f2;
-        document.getElementById('f3').innerText = t[lang].f3;
-        for(let i=1; i<=8; i++) {
-            if(document.getElementById('t'+i)) document.getElementById('t'+i).innerText = t[lang]['t'+i];
-            if(document.getElementById('d'+i)) document.getElementById('d'+i).innerText = t[lang]['d'+i];
+        document.getElementById('th-soft').innerText = t[lang].thSoft;
+        document.getElementById('s1').innerText = t[lang].s1;
+        document.getElementById('s2').innerText = t[lang].s2;
+        document.getElementById('s3').innerText = t[lang].s3;
+        document.getElementById('sec-projects').innerText = t[lang].secProjects;
+        for(let i=1; i<=4; i++) {
+            document.getElementById('t'+i).innerText = t[lang]['t'+i];
+            document.getElementById('d'+i).innerText = t[lang]['d'+i];
         }
-        document.getElementById('canva-btn').innerText = t[lang].canvaBtn;
     }
 </script>
 
 </body>
 </html>
-           
