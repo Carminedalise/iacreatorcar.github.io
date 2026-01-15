@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carmine D'Alise | Senior Digital Experience Lead</title>
+    <title>Carmine D'Alise | Senior Digital Experience Lead & Strategic Consultant</title>
     <style>
         :root {
             --bg: #020617; --card: #0f172a; --primary: #38bdf8;
@@ -11,61 +11,41 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        
         header, section { max-width: 1000px; margin: auto; padding: 2rem; }
-        
-        /* Language Switch Sticky */
         .lang-switch { text-align: right; padding: 1rem 2rem; position: sticky; top: 0; background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .lang-switch button { background: none; border: 1px solid var(--muted); color: var(--muted); padding: 5px 12px; cursor: pointer; border-radius: 4px; font-size: 0.75rem; font-weight: bold; transition: 0.3s; margin-left: 5px; }
         .lang-switch button:hover { border-color: var(--primary); color: var(--primary); }
-
-        /* Header & Round Logo */
         header { padding-top: 2rem; text-align: center; }
-        .logo-container {
-            width: 150px; height: 150px; margin: 0 auto 1.5rem auto;
-            border-radius: 50%; padding: 5px; border: 2px solid var(--primary);
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.15); overflow: hidden;
-            background: var(--card);
-        }
-        .logo-container img {
-            width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
-        }
-        
+        .logo-container { width: 150px; height: 150px; margin: 0 auto 1.5rem auto; border-radius: 50%; padding: 5px; border: 2px solid var(--primary); box-shadow: 0 0 20px rgba(56, 189, 248, 0.15); overflow: hidden; background: var(--card); }
+        .logo-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
         h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 0.5rem; }
         .subtitle { font-size: 1.1rem; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; font-weight: bold; }
+        
+        /* Mission Section Style */
+        .mission-box { background: rgba(56, 189, 248, 0.03); border-radius: 12px; border: 1px dashed rgba(56, 189, 248, 0.2); padding: 2rem; margin: 2rem auto; text-align: center; max-width: 900px; }
+        .mission-box p { font-style: italic; color: var(--text); font-size: 1rem; line-height: 1.8; }
 
-        /* Roadmap Steps */
         .roadmap { display: flex; justify-content: space-around; align-items: center; background: rgba(15, 23, 42, 0.5); border-radius: 12px; padding: 1.2rem; margin: 2rem 0; border: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; gap: 1rem; }
         .step { display: flex; flex-direction: column; align-items: center; gap: 5px; }
         .step-icon { font-size: 1.3rem; }
         .step-title { font-size: 0.7rem; font-weight: 700; color: var(--primary); text-transform: uppercase; }
-
-        .cta-container { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; justify-content: center; }
-        .cta { padding: 0.7rem 1.5rem; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 0.8rem; transition: 0.2s; }
-        .cta-primary { background: var(--primary); color: #020617; }
-        .cta-secondary { border: 1px solid var(--muted); color: var(--text); }
-
-        /* Matrix Section */
+        
         h3 { margin: 3rem 0 1.5rem 0; color: var(--secondary); font-size: 1.3rem; display: flex; align-items: center; gap: 10px; text-transform: uppercase; }
         h3::after { content: ""; flex: 1; height: 1px; background: rgba(255,255,255,0.1); }
-
         .matrix-container { background: var(--card); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 2rem; }
         .matrix-table { width: 100%; border-collapse: collapse; }
         .matrix-table th { background: rgba(255,255,255,0.03); color: var(--primary); text-align: left; padding: 12px 20px; font-size: 0.7rem; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .matrix-table td { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.85rem; vertical-align: top; }
         .tag { background: rgba(56, 189, 248, 0.1); color: var(--primary); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; margin-right: 5px; display: inline-block; margin-bottom: 5px; }
-
-        /* Projects Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
         .card { background: var(--card); border-radius: 12px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; display: flex; flex-direction: column; }
         .card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px -15px rgba(56,189,248,0.2); }
         .card h4 { color: #fff; margin-bottom: 0.8rem; font-size: 1.1rem; }
         .card p { font-size: 0.8rem; color: var(--muted); margin-bottom: 15px; flex-grow: 1; }
-        
-        .card-links { display: flex; gap: 8px; margin-top: auto; }
-        .card-link { font-size: 0.7rem; text-decoration: none; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--primary); color: var(--primary); transition: 0.3s; font-weight: bold; text-transform: uppercase; }
+        .card-links { display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap; }
+        .card-link { font-size: 0.65rem; text-decoration: none; padding: 6px 10px; border-radius: 4px; border: 1px solid var(--primary); color: var(--primary); transition: 0.3s; font-weight: bold; text-transform: uppercase; }
         .card-link:hover { background: var(--primary); color: #020617; }
-
         footer { padding: 4rem 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; border-top: 1px solid rgba(255,255,255,0.05); }
     </style>
 </head>
@@ -77,27 +57,26 @@
 </div>
 
 <header>
-    <div class="logo-container">
-        <img src="assets/logo.jpg" alt="Carmine D'Alise">
-    </div>
+    <div class="logo-container"><img src="assets/logo.jpg" alt="Carmine D'Alise"></div>
     <h1>Carmine D'Alise</h1>
     <div class="subtitle" id="subtitle">Senior Digital Experience Lead | Strategic Consultant</div>
-    
+</header>
+
+<section class="mission-box">
+    <h3 id="about-title" style="margin-top:0; color: var(--primary);">Mission & Experience</h3>
+    <p id="about-text">
+        "Dopo anni di operatività sul campo come Digital Lead a bordo delle navi, ho deciso di trasformare la mia esperienza globale in soluzioni digitali concrete. Il mondo dell'hospitality, il problem solving in situazioni critiche e l'innovazione tecnologica sono il mio terreno solido. Questi progetti rappresentano la mia passione e capacità di adattamento: oggi voglio mettere questo bagaglio al servizio dell'innovazione e formare le nuove generazioni."
+    </p>
+</section>
+
+<section>
     <div class="roadmap">
         <div class="step"><span class="step-icon">🛳️</span><span class="step-title">Cruise Ops</span></div>
         <div class="step"><span class="step-icon">📈</span><span class="step-title">Revenue</span></div>
         <div class="step"><span class="step-icon">👥</span><span class="step-title">Leadership</span></div>
-        <div class="step"><span class="step-icon">🏨</span><span class="step-title">Hospitality</span></div>
         <div class="step"><span class="step-icon">💡</span><span class="step-title">UX Strategy</span></div>
     </div>
 
-    <div class="cta-container">
-        <a class="cta cta-primary" href="https://github.com/iacreatorcar" target="_blank">View GitHub</a>
-        <a class="cta cta-secondary" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank">LinkedIn</a>
-    </div>
-</header>
-
-<section>
     <h3 id="sec-skills">Strategic Management & Digital Matrix</h3>
     <div class="matrix-container">
         <table class="matrix-table">
@@ -112,26 +91,16 @@
                 <tr>
                     <td><strong>Department Lead</strong></td>
                     <td>
-                        <span class="tag">Aroya App</span><span class="tag">Interactive TV</span><span class="tag">Digital Screens</span>
-                        <span class="tag">Starlink Wi-Fi</span><span class="tag">CMS Management</span>
+                        <span class="tag">Aroya App</span><span class="tag">Interactive TV</span><span class="tag">Starlink</span>
                     </td>
                     <td id="s1">Revenue Promotion, KPI Targets, Coaching & Training, Complaint Handling.</td>
                 </tr>
                 <tr>
                     <td><strong>Technical Operations</strong></td>
                     <td>
-                        <span class="tag">Samsung VXT</span><span class="tag">IPTV Systems</span><span class="tag">SLA Monitoring</span>
-                        <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">MongoDB</span>
+                        <span class="tag">LG Pro:Centric</span><span class="tag">React 19</span><span class="tag">FastAPI</span><span class="tag">MongoDB</span>
                     </td>
                     <td id="s2">Multicultural Operations, Team Management (25+ staff), Leadership by Example.</td>
-                </tr>
-                <tr>
-                    <td><strong>UX & Connectivity</strong></td>
-                    <td>
-                        <span class="tag">Peplink 5G</span><span class="tag">Satellite Tech</span><span class="tag">UX Principles</span>
-                        <span class="tag">JSON Scripting</span><span class="tag">GitHub</span><span class="tag">Nginx</span>
-                    </td>
-                    <td id="s3">Brand Alignment, Feedback Analysis, Stakeholder Communication, Goal Achievement.</td>
                 </tr>
             </tbody>
         </table>
@@ -141,85 +110,102 @@
 <section>
     <h3 id="sec-projects">Core Projects & Showcases</h3>
     <div class="grid">
+        <div class="card" style="border-top: 3px solid var(--primary); background: rgba(56, 189, 248, 0.05);">
+            <h4 id="t5">Smart Ship Menu System ⚓</h4>
+            <p id="d5">Prototipo di menu digitale per la flotta, creato in 24h. Dimostrazione di deploy rapido Vercel.</p>
+            <div class="card-links"><a href="https://smart-menu-qr.vercel.app" target="_blank" class="card-link">Live Demo →</a></div>
+        </div>
+
         <div class="card" style="border-top: 3px solid var(--primary);">
-            <h4 id="t1">Sea-Services CMS 🚢</h4>
-            <p id="d1">Consulenza strategica per l'Hospitality digitale. Integrazione di AI e UX per ottimizzare l'esperienza dell'ospite a bordo.</p>
-            <div class="card-links"><a href="https://sea-services.emergent.host" target="_blank" class="card-link">Live Project →</a></div>
-        </div>
-
-        <div class="card" style="border-top: 3px solid var(--accent);">
-            <h4 id="t2">Visual Media Portfolio 🎨</h4>
-            <p id="d2">Showcase delle strategie di comunicazione e identity design applicate ai servizi hospitality internazionali.</p>
-            <div class="card-links"><a href="https://www.canva.com/design/DAGFNejoyL4/5MlHThgTRUWJmlbR2o-33g/view" target="_blank" class="card-link">Explore Canva →</a></div>
-        </div>
-
-        <div class="card">
-            <h4 id="t3">Digital SOP Guide 📺</h4>
-            <p id="d3">Manuali operativi per la gestione di infrastrutture multimediali complesse e troubleshooting tecnico di alto livello.</p>
-            <div class="card-links"><a href="https://iacreatorcar.github.io/Tv-Cabin-Sop/" target="_blank" class="card-link">GitHub Docs →</a></div>
+            <h4 id="t1">Cruise Hospitality CMS 🚢</h4>
+            <p id="d1">Piattaforma CMS Hospitality. Stack: React 19, FastAPI, MongoDB 5.0. Licenza MIT.</p>
+            <div class="card-links">
+                <a href="https://sea-services.emergent.host" target="_blank" class="card-link">Live Project →</a>
+                <a href="https://iacreatorcar.github.io/cruise-hospitality-cms/" target="_blank" class="card-link">GitHub</a>
+            </div>
         </div>
 
         <div class="card" style="border-top: 3px solid var(--secondary);">
-            <h4 id="t4">Mini Jira Workflow Demo 🛠️</h4>
-            <p id="d4">Gestione task basata su architettura Docker, progettata per ottimizzare i flussi di lavoro tecnici e il tracking dei progetti.</p>
-            <div class="card-links">
-                <a href="https://iacreatorcar.github.io/mini-jira-demo/" target="_blank" class="card-link">Live Demo →</a>
-                <a href="https://github.com/iacreatorcar/mini-jira-demo" target="_blank" class="card-link">Repo Code</a>
-            </div>
+            <h4 id="t6">Kiwi Automation Project 🥝</h4>
+            <p id="d6">Ambiente QA professionale con Docker Compose. Test mobilità eseguito su S24 Ultra via Termux.</p>
+            <div class="card-links"><a href="https://iacreatorcar.github.io/Kiwi-Automation-Project/" target="_blank" class="card-link">Live Demo →</a></div>
+        </div>
+
+        <div class="card" style="border-top: 3px solid var(--accent);">
+            <h4 id="t7">PetStyle eCommerce 🐾</h4>
+            <p id="d7">Soluzione eCommerce dedicata al settore Pet. Prototipo funzionale con focus su UX moderna.</p>
+            <div class="card-links"><a href="https://iacreatorcar.github.io/PetStyle/" target="_blank" class="card-link">Live Demo →</a></div>
+        </div>
+
+        <div class="card">
+            <h4 id="t8">Corporate Board Quiz 🧠</h4>
+            <p id="d8">Quiz interattivo per personale di bordo e ufficio per consolidare le nozioni aziendali.</p>
+            <div class="card-links"><a href="https://iacreatorcar.github.io/cms-quiz/" target="_blank" class="card-link">Start Quiz →</a></div>
+        </div>
+
+        <div class="card" style="border-top: 3px solid var(--secondary);">
+            <h4 id="t4">Mini Jira Workflow 🛠️</h4>
+            <p id="d4">Gestione task basata su Docker, progettata per ottimizzare i flussi tecnici e tracking Jira.</p>
+            <div class="card-links"><a href="https://iacreatorcar.github.io/mini-jira-demo/" target="_blank" class="card-link">Demo →</a></div>
         </div>
     </div>
 </section>
 
-<footer>
-    © 2026 Carmine D'Alise | Senior Digital Experience Lead | GitHub: iacreatorcar
-</footer>
+<footer>© 2026 Carmine D'Alise | Senior Digital Experience Lead | Strategic Consultant</footer>
 
 <script>
     const t = {
         en: {
             sub: "Senior Digital Experience Lead | Strategic Consultant",
+            missionTitle: "Mission & Experience",
+            missionText: "\"After years of field operations as a Digital Lead on ships, I decided to transform my global experience into concrete digital solutions. The world of hospitality, problem-solving in critical situations, and technological innovation are my solid ground. These projects represent my passion and ability to adapt: today I want to put this background at the service of innovation and train the new generations.\"",
             secSkills: "Strategic Management & Digital Matrix",
             thCat: "Domain", thTool: "Digital Ecosystem", thSoft: "Leadership & Business",
             s1: "Revenue Promotion, KPI Targets, Coaching & Training, Complaint Handling.",
             s2: "Multicultural Operations, Team Management (25+ staff), Leadership by Example.",
-            s3: "Brand Alignment, Feedback Analysis, Stakeholder Communication, Goal Achievement.",
             secProjects: "Core Projects & Showcases",
-            t1: "Sea-Services CMS 🚢", d1: "Strategic consulting for digital hospitality. AI and UX integration to optimize the onboard guest experience.",
-            t2: "Visual Media Portfolio 🎨", d2: "Showcase of communication strategies and identity design applied to international hospitality services.",
-            t3: "Digital SOP Guide 📺", d3: "Operational manuals for managing complex multimedia infrastructures and high-level technical troubleshooting.",
-            t4: "Mini Jira Workflow Demo 🛠️", d4: "Task management system built on Docker architecture, designed to optimize technical workflows and project tracking."
+            t1: "Cruise Hospitality CMS 🚢", d1: "Hospitality CMS platform. Stack: React 19, FastAPI, MongoDB 5.0. MIT License.",
+            t4: "Mini Jira Workflow 🛠️", d4: "Task management built on Docker, designed to optimize technical workflows and Jira tracking.",
+            t5: "Smart Ship Menu System ⚓", d5: "Digital menu system prototype for fleet operations, 24h development. Vercel deployment.",
+            t6: "Kiwi Automation Project 🥝", d6: "Professional QA environment with Docker Compose. Mobile prototyping tested on S24 Ultra.",
+            t7: "PetStyle eCommerce 🐾", d7: "E-commerce solution for the Pet industry. Functional prototype with modern UX focus.",
+            t8: "Corporate Board Quiz 🧠", d8: "Interactive quiz for onboard and office staff to consolidate corporate knowledge."
         },
         it: {
             sub: "Senior Digital Experience Lead | Consulente Tecnico Strategico",
+            missionTitle: "Mission & Esperienza",
+            missionText: "\"Dopo anni di operatività sul campo come Digital Lead a bordo delle navi, ho deciso di trasformare la mia esperienza globale in soluzioni digitali concrete. Il mondo dell'hospitality, il problem solving in situazioni critiche e l'innovazione tecnologica sono il mio terreno solido. Questi progetti rappresentano la mia passione e capacità di adattamento: oggi voglio mettere questo bagaglio al servizio dell'innovazione e formare le nuove generazioni.\"",
             secSkills: "Gestione Strategica & Matrice Digitale",
             thCat: "Dominio", thTool: "Ecosistema Digitale", thSoft: "Leadership & Business",
             s1: "Revenue Promotion, Target KPI, Coaching & Training, Gestione Reclami.",
             s2: "Operazioni Multiculturali, Gestione Team (25+ staff), Leadership d'esempio.",
-            s3: "Brand Alignment, Analisi Feedback, Comunicazione Stakeholder, Raggiungimento Obiettivi.",
             secProjects: "Progetti Core & Showcase",
-            t1: "Sea-Services CMS 🚢", d1: "Consulenza strategica per l'hospitality digitale. Integrazione di AI e UX per ottimizzare l'esperienza ospite.",
-            t2: "Visual Media Portfolio 🎨", d2: "Showcase di strategie di comunicazione e identity design per servizi hospitality internazionali.",
-            t3: "Guida SOP Digitale 📺", d3: "Manuali operativi per la gestione di infrastrutture multimediali e troubleshooting tecnico di alto livello.",
-            t4: "Mini Jira Workflow Demo 🛠️", d4: "Gestione task basata su architettura Docker, progettata per ottimizzare i flussi di lavoro tecnici e il tracking."
+            t1: "Cruise Hospitality CMS 🚢", d1: "Piattaforma CMS Hospitality. Stack: React 19, FastAPI, MongoDB 5.0. Licenza MIT.",
+            t4: "Mini Jira Workflow 🛠️", d4: "Gestione task su Docker, progettata per ottimizzare i flussi tecnici e il tracking Jira.",
+            t5: "Smart Ship Menu System ⚓", d5: "Prototipo di menu digitale per la flotta, creato in 24h. Dimostrazione di deploy rapido Vercel.",
+            t6: "Kiwi Automation Project 🥝", d6: "Ambiente QA professionale con Docker Compose. Test mobilità su S24 Ultra.",
+            t7: "PetStyle eCommerce 🐾", d7: "Soluzione eCommerce per il settore Pet. Prototipo funzionale con focus su UX moderna.",
+            t8: "Corporate Board Quiz 🧠", d8: "Quiz interattivo per personale di bordo e ufficio per testare le nozioni aziendali."
         }
     };
 
     function switchLang(lang) {
         document.getElementById('subtitle').innerText = t[lang].sub;
+        document.getElementById('about-title').innerText = t[lang].missionTitle;
+        document.getElementById('about-text').innerText = t[lang].missionText;
         document.getElementById('sec-skills').innerText = t[lang].secSkills;
         document.getElementById('th-cat').innerText = t[lang].thCat;
         document.getElementById('th-tool').innerText = t[lang].thTool;
         document.getElementById('th-soft').innerText = t[lang].thSoft;
         document.getElementById('s1').innerText = t[lang].s1;
         document.getElementById('s2').innerText = t[lang].s2;
-        document.getElementById('s3').innerText = t[lang].s3;
         document.getElementById('sec-projects').innerText = t[lang].secProjects;
-        for(let i=1; i<=4; i++) {
+        const ids = [1, 4, 5, 6, 7, 8];
+        ids.forEach(i => {
             document.getElementById('t'+i).innerText = t[lang]['t'+i];
             document.getElementById('d'+i).innerText = t[lang]['d'+i];
-        }
+        });
     }
 </script>
-
 </body>
 </html>
