@@ -119,6 +119,14 @@
 <section>
     <h3 id="sec-projects">Core Projects & Showcases</h3>
     <div class="grid">
+        <div class="card" style="border-top: 3px solid var(--accent); background: rgba(245, 158, 11, 0.05);">
+            <h4 id="t-canva">Certifications & Field Portfolio 🎖️</h4>
+            <p id="d-canva">Presentazione multimediale delle mie certificazioni internazionali e galleria fotografica dei progetti realizzati on-board.</p>
+            <div class="card-links">
+                <a href="https://www.canva.com/design/DAGFNejoyL4/MHkiG61sTBJYGzgKQS8NKQ/view?utm_content=DAGFNejoyL4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb65f161acf" target="_blank" class="card-link" style="border-color: var(--accent); color: var(--accent);">View Gallery →</a>
+            </div>
+        </div>
+
         <div class="card" style="border-top: 3px solid var(--primary); background: rgba(56, 189, 248, 0.05);">
             <h4 id="t5">Smart Ship Menu System ⚓</h4>
             <p id="d5">Prototipo di menu digitale per la flotta, creato in 24h. Dimostrazione di deploy rapido Vercel.</p>
@@ -186,6 +194,8 @@
             s1: "Revenue Promotion, KPI Targets, Coaching & Training, Complaint Handling.",
             s2: "Multicultural Operations, Team Management (25+ staff), Leadership by Example.",
             secProjects: "Core Projects & Showcases",
+            t_canva: "Certifications & Field Portfolio 🎖️",
+            d_canva: "Multimedia presentation of international certifications and photo gallery of projects completed on-board.",
             t1: "Cruise Hospitality CMS 🚢", d1: "Hospitality CMS platform. Stack: React 19, FastAPI, MongoDB 5.0. MIT License.",
             t4: "Mini Jira Workflow 🛠️", d4: "Task management built on Docker, designed to optimize technical workflows and Jira tracking.",
             t5: "Smart Ship Menu System ⚓", d5: "Digital menu system prototype for fleet operations, 24h development. Vercel deployment.",
@@ -205,6 +215,8 @@
             s1: "Revenue Promotion, Target KPI, Coaching & Training, Gestione Reclami.",
             s2: "Operazioni Multiculturali, Gestione Team (25+ staff), Leadership d'esempio.",
             secProjects: "Progetti Core & Showcase",
+            t_canva: "Certificazioni & Portfolio sul Campo 🎖️",
+            d_canva: "Presentazione multimediale delle certificazioni internazionali e galleria fotografica dei progetti realizzati on-board.",
             t1: "Cruise Hospitality CMS 🚢", d1: "Piattaforma CMS Hospitality. Stack: React 19, FastAPI, MongoDB 5.0. Licenza MIT.",
             t4: "Mini Jira Workflow 🛠️", d4: "Gestione task su Docker, progettata per ottimizzare i flussi tecnici e il tracking Jira.",
             t5: "Smart Ship Menu System ⚓", d5: "Prototipo di menu digitale per la flotta, creato in 24h. Dimostrazione di deploy rapido Vercel.",
@@ -231,6 +243,8 @@
         document.getElementById('contact-title').innerText = t[lang].contactTitle;
         document.getElementById('contact-msg').innerText = t[lang].contactMsg;
         document.getElementById('creds-note').innerText = t[lang].credsNote;
+        document.getElementById('t-canva').innerText = t[lang].t_canva;
+        document.getElementById('d-canva').innerText = t[lang].d_canva;
         const ids = [1, 4, 5, 6, 7, 8];
         ids.forEach(i => {
             document.getElementById('t'+i).innerText = t[lang]['t'+i];
