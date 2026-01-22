@@ -157,9 +157,12 @@ const App: React.FC = () => {
           <div className="relative w-40 h-40 mx-auto rounded-full p-1 bg-gradient-to-br from-sky-400 to-green-500">
             <div className="w-full h-full rounded-full bg-slate-900 p-1">
               <img 
-                src="https://picsum.photos/seed/carmine/400/400" 
+                src="assets/logo.jpg" 
                 alt="Carmine D'Alise" 
                 className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-700"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://picsum.photos/seed/carmine/400/400";
+                }}
               />
             </div>
           </div>
@@ -248,13 +251,13 @@ const App: React.FC = () => {
         </p>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <a 
-            href="mailto:c.dalise@live.com" 
+            href="mailto:iacreatorcar@gmail.com" 
             className="group relative inline-flex items-center gap-3 bg-white text-slate-950 px-10 py-5 rounded-2xl font-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(255,255,255,0.1)]"
           >
             <span>📧 EMAIL ME</span>
           </a>
           <a 
-            href="https://linkedin.com/in/iacreatorcar" 
+            href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" 
             target="_blank"
             className="inline-flex items-center gap-3 border border-slate-700 hover:border-sky-400 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest transition-all"
           >
@@ -267,7 +270,7 @@ const App: React.FC = () => {
       <footer className="mt-20 py-16 text-center px-6 border-t border-slate-800/50">
         <div className="flex justify-center gap-6 mb-8 text-slate-500">
            <a href="https://github.com/iacreatorcar" className="hover:text-white transition-colors">GITHUB</a>
-           <a href="https://linkedin.com/in/iacreatorcar" className="hover:text-sky-400 transition-colors">LINKEDIN</a>
+           <a href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" className="hover:text-sky-400 transition-colors">LINKEDIN</a>
         </div>
         <p className="text-slate-600 text-[10px] font-bold tracking-[0.2em] uppercase">{t.footer}</p>
       </footer>
