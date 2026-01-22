@@ -1,48 +1,148 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carmine D'Alise | Senior Digital Experience Lead</title>
-    <meta name="description" content="Portfolio di Carmine D'Alise - Senior Digital Experience Lead & Strategic Consultant. Specializzato in Hospitality e Innovazione Digitale.">
-    
-    <!-- Open Graph for Social Media -->
-    <meta property="og:title" content="Carmine D'Alise | Portfolio">
-    <meta property="og:description" content="Digital Experience Lead & Strategic Consultant. Scopri i miei progetti nell'ambito Hospitality e Tech.">
-    <meta property="og:image" content="assets/logo.jpg">
-    <meta property="og:type" content="website">
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .card-hover:hover { transform: translateY(-8px); border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 20px 40px -20px rgba(56, 189, 248, 0.3); }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #e2e8f0; scroll-behavior: smooth; }
+        .glass { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(51, 65, 85, 0.5); }
+        .card-hover { transition: all 0.4s ease; border-top-width: 4px; }
+        .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.3); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade { animation: fadeUp 0.8s ease-out forwards; }
     </style>
-    <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@19.0.0",
-    "react-dom": "https://esm.sh/react-dom@19.0.0",
-    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
-  }
-}
-</script>
 </head>
-<body class="bg-[#020617] text-slate-200 antialiased selection:bg-sky-500/30 selection:text-sky-200">
-    <div id="root"></div>
-    <script type="module" src="index.tsx"></script>
+<body class="antialiased">
+
+    <nav class="fixed w-full top-0 z-50 glass py-5 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex gap-6">
+            <a href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank" class="text-[10px] font-black tracking-widest uppercase hover:text-sky-400 transition">LINKEDIN</a>
+            <a href="https://github.com/iacreatorcar" target="_blank" class="text-[10px] font-black tracking-widest uppercase hover:text-white transition">GITHUB</a>
+        </div>
+        <div class="flex gap-2">
+            <button onclick="changeLang('it')" id="btn-it" class="px-3 py-1 text-[10px] font-black rounded border border-sky-400 text-sky-400 bg-sky-400/10">IT</button>
+            <button onclick="changeLang('en')" id="btn-en" class="px-3 py-1 text-[10px] font-black rounded border border-slate-700 text-slate-500">EN</button>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto pt-40 pb-20 text-center px-6 animate-fade">
+        <div class="relative inline-block mb-10">
+            <div class="w-40 h-40 mx-auto rounded-full p-1 bg-gradient-to-br from-sky-400 to-green-400 shadow-2xl">
+                <img src="assets/logo.jpg" alt="Logo" class="w-full h-full object-cover rounded-full" onerror="this.src='https://ui-avatars.com/api/?name=Carmine+Dalise&background=020617&color=38bdf8&size=200'">
+            </div>
+        </div>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 uppercase italic">
+            <span class="text-white">Carmine</span> <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-green-400">D'Alise</span>
+        </h1>
+        <p id="subtitle" class="text-xl md:text-2xl font-light text-slate-400 tracking-widest uppercase">
+            Senior Digital Experience Lead | Consulente Tecnico Strategico
+        </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto px-6 mb-32 animate-fade">
+        <div class="glass rounded-[3rem] p-12 text-center border-sky-500/20">
+            <h3 id="mission-title" class="text-sky-400 text-[10px] font-black uppercase tracking-widest mb-6">Mission & Visione Professionale</h3>
+            <p id="mission-text" class="text-2xl md:text-3xl font-semibold italic leading-snug">
+                "Dopo anni di operatività sul campo come Digital Lead a bordo delle navi, ho deciso di trasformare la mia esperienza globale in soluzioni digitali concrete..."
+            </p>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 mb-32">
+        <div class="flex items-center gap-6 mb-12">
+            <h2 id="sec-projects" class="text-3xl font-black uppercase italic">Progetti Strategici</h2>
+            <div class="h-px bg-slate-800 flex-grow"></div>
+        </div>
+        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+    </section>
+
+    <section id="contact" class="max-w-4xl mx-auto px-6 text-center py-20 mb-20 glass rounded-[4rem] animate-fade">
+        <h3 id="contact-title" class="text-sky-400 text-[10px] font-black uppercase tracking-widest mb-8">Contatti</h3>
+        <p id="contact-msg" class="text-4xl md:text-5xl font-black mb-12 uppercase italic leading-none">
+            Interessato a una consulenza strategica?
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="mailto:iacreatorcar@gmail.com" class="bg-sky-400 text-slate-950 px-10 py-5 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-sky-300 transition shadow-lg shadow-sky-500/20">📧 SEND EMAIL</a>
+            <a href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank" class="border-2 border-slate-700 text-white px-10 py-5 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-white/5 transition">LINKEDIN</a>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-slate-800">
+        <p id="footer-text" class="text-slate-500 text-[10px] font-bold tracking-[0.3em] uppercase">
+            © 2026 Carmine D'Alise | Senior Digital Experience Lead
+        </p>
+    </footer>
+
+    <script>
+        // DATI TRADUZIONI
+        const translations = {
+            it: {
+                subtitle: "Senior Digital Experience Lead | Consulente Tecnico Strategico",
+                missionTitle: "Mission & Visione Professionale",
+                missionText: "\"Dopo anni di operatività sul campo come Digital Lead a bordo delle navi, ho deciso di trasformare la mia esperienza globale in soluzioni digitali concrete. Il mondo dell'hospitality, il problem solving in situazioni critiche e l'innovazione tecnologica sono il mio terreno solido.\"",
+                secProjects: "Progetti Strategici",
+                contactTitle: "Contatti & Collaborazioni",
+                contactMsg: "Interessato a una demo completa o a una consulenza strategica? Parliamone.",
+                footer: "© 2026 Carmine D'Alise | Senior Digital Experience Lead | Strategic Consultant",
+                creds: "* Credenziali demo su richiesta: iacreatorcar@gmail.com"
+            },
+            en: {
+                subtitle: "Senior Digital Experience Lead | Strategic Consultant",
+                missionTitle: "Mission & Professional Vision",
+                missionText: "\"After years of field operations as a Digital Lead on ships, I decided to transform my global experience into concrete digital solutions. Hospitality, problem-solving in critical situations, and innovation are my solid ground.\"",
+                secProjects: "Strategic Projects",
+                contactTitle: "Get in Touch",
+                contactMsg: "Looking for a complete demo or a strategic consultation? Let's connect.",
+                footer: "© 2026 Carmine D'Alise | Senior Digital Experience Lead | Strategic Consultant",
+                creds: "* Demo credentials available upon request: iacreatorcar@gmail.com"
+            }
+        };
+
+        const projectsData = [
+            { id: 'hotelflow', color: 'sky-400', url: 'https://hotelflow-manager.vercel.app', title: { it: 'HotelFlow Manager 🏨', en: 'HotelFlow Manager 🏨' }, desc: { it: 'Suite gestionale ad alte prestazioni per l\'hospitality moderna.', en: 'High-performance management suite for modern hospitality.' } },
+            { id: 'cms', color: 'sky-400', url: 'https://sea-services.emergent.host', title: { it: 'Cruise Hospitality CMS 🚢', en: 'Cruise Hospitality CMS 🚢' }, desc: { it: 'Piattaforma CMS per hospitality marittima. Tech: React, FastAPI.', en: 'Robust CMS platform for maritime hospitality.' } },
+            { id: 'menu', color: 'sky-400', url: 'https://smart-menu-qr.vercel.app', title: { it: 'Smart Ship Menu ⚓', en: 'Smart Ship Menu ⚓' }, desc: { it: 'Prototipo di menu digitale per operazioni di flotta.', en: 'Fast-deploy digital menu prototype for cruise operations.' }, creds: true },
+            { id: 'kiwi', color: 'green-500', url: 'https://iacreatorcar.github.io/Kiwi-Automation-Project/', title: { it: 'Kiwi Automation 🥝', en: 'Kiwi Automation 🥝' }, desc: { it: 'Ambiente di QA automation professionale.', en: 'Enterprise-grade QA automation environment.' } },
+            { id: 'petstyle', color: 'orange-500', url: 'https://iacreatorcar.github.io/PetStyle/', title: { it: 'PetStyle eCommerce 🐾', en: 'PetStyle eCommerce 🐾' }, desc: { it: 'Prototipo e-commerce D2C per il settore pet.', en: 'Modern D2C e-commerce prototype for the pet industry.' } },
+            { id: 'jira', color: 'green-500', url: 'https://iacreatorcar.github.io/mini-jira-demo/', title: { it: 'Mini Jira Workflow 🛠️', en: 'Mini Jira Workflow 🛠️' }, desc: { it: 'Architettura personalizzata di task management.', en: 'Custom task management architecture.' } }
+        ];
+
+        function changeLang(lang) {
+            // Aggiorna testi semplici
+            document.getElementById('subtitle').innerText = translations[lang].subtitle;
+            document.getElementById('mission-title').innerText = translations[lang].missionTitle;
+            document.getElementById('mission-text').innerText = translations[lang].missionText;
+            document.getElementById('sec-projects').innerText = translations[lang].secProjects;
+            document.getElementById('contact-title').innerText = translations[lang].contactTitle;
+            document.getElementById('contact-msg').innerText = translations[lang].contactMsg;
+            document.getElementById('footer-text').innerText = translations[lang].footer;
+
+            // Aggiorna bottoni
+            document.getElementById('btn-it').className = lang === 'it' ? 'px-3 py-1 text-[10px] font-black rounded border border-sky-400 text-sky-400 bg-sky-400/10' : 'px-3 py-1 text-[10px] font-black rounded border border-slate-700 text-slate-500';
+            document.getElementById('btn-en').className = lang === 'en' ? 'px-3 py-1 text-[10px] font-black rounded border border-sky-400 text-sky-400 bg-sky-400/10' : 'px-3 py-1 text-[10px] font-black rounded border border-slate-700 text-slate-500';
+
+            // Ricarica Progetti
+            const container = document.getElementById('projects-container');
+            container.innerHTML = '';
+            projectsData.forEach(p => {
+                const card = `
+                    <div class="glass p-8 rounded-[2rem] flex flex-col card-hover border-t-${p.color} animate-fade">
+                        <h4 class="text-white font-extrabold text-xl mb-4 uppercase italic tracking-tighter">${p.title[lang]}</h4>
+                        <p class="text-slate-400 text-sm mb-8 flex-grow">${p.desc[lang]}</p>
+                        ${p.creds ? `<div class="bg-orange-500/10 border border-orange-500/20 rounded-xl p-2 mb-4 text-[9px] text-orange-400 font-bold text-center uppercase">${translations[lang].creds}</div>` : ''}
+                        <a href="${p.url}" target="_blank" class="inline-block text-center border border-slate-700 text-slate-300 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:border-sky-400 hover:text-sky-400 transition">View Project →</a>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        }
+
+        // Avvio iniziale
+        changeLang('it');
+    </script>
 </body>
 </html>
-
