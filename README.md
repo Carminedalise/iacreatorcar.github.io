@@ -24,8 +24,9 @@
 ---
 
 ### 🔗 Portfolio & Socials
-* **[Live Digital Portfolio](https://iacreatorcar.github.io)** - *Skills Matrix & Projects*
-* **[Visual Strategy (Canva)](https://www.canva.com/design/DAGFNejoyL4/5MlHThgTRUWJmlbR2o-33g/view)** - *UX/UI & Media Showcase*
-* **[LinkedIn Profile](https://www.linkedin.com/in/carmine-d-alise-3b25024b/)** - *Full Career History*
+* **[🌍 Live Digital Portfolio](https://carmine-dalise-portfolio.vercel.app)** - *Skills Matrix & Projects*
+* **[📂 Visual Strategy (Canva)](https://www.canva.com/design/DAGFNejoyL4/MHkiG61sTBJYGzgKQS8NKQ/view)** - *UX/UI & Media Showcase*
+* **[💼 LinkedIn Profile](https://www.linkedin.com/in/carmine-d-alise-3b25024b/)** - *Full Career History*
 
-© 2026 Carmine D'Alise | Senior Digital Lead | GitHub: iacreatorcar
+---
+© 2026 Carmine D'Alise | Senior Digital Lead | GitHub: [iacreatorcar](https://github.com/iacreatorcar)
