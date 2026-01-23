@@ -69,7 +69,7 @@
                 secFeatured: "Strategic Hospitality Systems (Core Expertise)",
                 secOthers: "Technical Showcases & Labs",
                 footer: "© 2026 Carmine D'Alise | Professional Portfolio",
-                creds: "* Credenziali demo su richiesta: iacreatorcar@gmail.com"
+                credsText: "Username: admin <br> Password: 1234"
             },
             en: {
                 subtitle: "Senior Digital Experience Lead | Strategic Consultant",
@@ -78,20 +78,20 @@
                 secFeatured: "Strategic Hospitality Systems (Core Expertise)",
                 secOthers: "Technical Showcases & Labs",
                 footer: "© 2026 Carmine D'Alise | Professional Portfolio",
-                creds: "* Demo credentials upon request: iacreatorcar@gmail.com"
+                credsText: "Username: admin <br> Password: 1234"
             }
         };
 
         const featuredProjects = [
             { id: 'hflow', border: 'border-sky', title: 'HOTELFLOW MANAGER 🏨', desc: { it: 'Suite gestionale ad alte prestazioni per l\'hospitality moderna. Integrazione completa flussi operativi.', en: 'High-performance management suite for modern hospitality. Full operational workflow integration.' }, links: [{txt: 'LIVE DEMO →', main: true, url: 'https://hotelflow-manager.vercel.app'}, {txt: 'GITHUB', main: false, url: 'https://iacreatorcar.github.io/hotelflow-manager/'}] },
             { id: 'cms', border: 'border-sky', title: 'CRUISE HOSPITALITY CMS 🚢', desc: { it: 'Piattaforma CMS per hospitality marittima. Gestione contenuti complessi su scala globale.', en: 'Maritime hospitality CMS platform. Complex content management on a global scale.' }, links: [{txt: 'LIVE PROJECT →', main: true, url: 'https://sea-services.emergent.host'}, {txt: 'GITHUB', main: false, url: 'https://iacreatorcar.github.io/cruise-hospitality-cms/'}] },
-            { id: 'menu', border: 'border-sky', title: 'SMART SHIP MENU SYSTEM ⚓', desc: { it: 'Prototipo di menu digitale per operazioni di flotta. Ottimizzazione UX per ambienti marittimi.', en: 'Digital menu prototype for fleet operations. UX optimized for maritime environments.' }, creds: true, links: [{txt: 'LIVE DEMO →', main: true, url: 'https://smart-menu-qr.vercel.app'}] }
+            { id: 'menu', border: 'border-sky', title: 'SMART SHIP MENU SYSTEM ⚓', desc: { it: 'Prototipo di menu digitale per operazioni di flotta. UX ottimizzata per ambienti marittimi.', en: 'Digital menu prototype for fleet operations. UX optimized for maritime environments.' }, creds: true, links: [{txt: 'LIVE DEMO →', main: true, url: 'https://smart-menu-qr.vercel.app'}] }
         ];
 
         const otherProjects = [
             { id: 'jira', border: 'border-green', title: 'JIRA TICKETING WORKFLOW 🛠️', desc: { it: 'Gestione ticket e workflow tecnici. Deploy Vercel, Docker-ready.', en: 'Technical ticketing and workflow management. Deployed on Vercel, Docker-ready.' }, links: [{txt: 'LIVE VERCEL', main: true, url: 'https://mini-jira-demo.vercel.app'}, {txt: 'DOCKER', main: false, url: 'https://github.com/iacreatorcar/mini-jira-demo'}] },
             { id: 'cms-quiz', border: 'border-purple', title: 'CMS THEORY QUIZ 🧠', desc: { it: 'App interattiva per valutare competenze su CMS e strategia digitale.', en: 'Interactive app to assess knowledge on CMS and digital strategy.' }, links: [{txt: 'START QUIZ →', main: true, url: 'https://iacreatorcar.github.io/cms-quiz/'}] },
-            { id: 'cert', border: 'border-orange', title: 'CERTIFICAZIONI & MEDIA 🎖️', desc: { it: 'Showcase multimediale delle certificazioni e dei progetti on-board.', en: 'Multimedia showcase of certifications and shipboard projects.' }, links: [{txt: 'VIEW ALL →', main: true, url: 'https://www.canva.com/design/DAGFNejoyL4/MHkiG61sTBJYGzgKQS8NKQ/view'}] },
+            { id: 'cert', border: 'border-orange', title: 'CERTIFICAZIONI & MEDIA 🎖️', desc: { it: 'Showcase multimediale delle certificazioni e dei progetti realizzati on-board.', en: 'Multimedia showcase of certifications and shipboard projects.' }, links: [{txt: 'VIEW ALL →', main: true, url: 'https://www.canva.com/design/DAGFNejoyL4/MHkiG61sTBJYGzgKQS8NKQ/view'}] },
             { id: 'kiwi', border: 'border-green', title: 'KIWI QA AUTOMATION 🥝', desc: { it: 'Ambiente di QA automation professionale mobile-first.', en: 'Professional mobile-first QA automation environment.' }, links: [{txt: 'VIEW LAB', main: false, url: 'https://iacreatorcar.github.io/Kiwi-Automation-Project/'}] },
             { id: 'pet', border: 'border-orange', title: 'PETSTYLE ECOMMERCE 🐾', desc: { it: 'Prototipo e-commerce D2C per il settore pet.', en: 'D2C e-commerce prototype for the pet industry.' }, links: [{txt: 'VIEW DEMO', main: false, url: 'https://iacreatorcar.github.io/PetStyle/'}] }
         ];
@@ -101,7 +101,7 @@
             return `<div class="card-project ${p.border} ${p.id === 'hflow' || p.id === 'cms' || p.id === 'menu' ? 'card-featured' : ''}">
                 <h4 class="text-white font-black text-[12px] mb-3 italic uppercase">${p.title}</h4>
                 <p class="text-slate-400 text-[10px] leading-relaxed mb-6 flex-grow">${p.desc[lang]}</p>
-                ${p.creds ? `<div class="bg-orange-500/10 border border-orange-500/20 rounded-lg p-2 mb-4 text-[8px] text-orange-400 font-bold text-center uppercase">${content[lang].creds}</div>` : ''}
+                ${p.creds ? `<div class="bg-sky-500/10 border border-sky-500/20 rounded-lg p-3 mb-4 text-[9px] text-sky-400 font-mono leading-tight">${content[lang].credsText}</div>` : ''}
                 <div class="flex flex-wrap gap-2">${linksHtml}</div>
             </div>`;
         }
@@ -117,7 +117,6 @@
             document.getElementById('featured-grid').innerHTML = featuredProjects.map(p => createCard(p, lang)).join('');
             document.getElementById('others-grid').innerHTML = otherProjects.map(p => createCard(p, lang)).join('');
             
-            // Toggle active button style
             document.getElementById('btn-it').className = lang === 'it' ? 'px-3 py-1 text-[10px] font-black rounded border border-sky-400 text-sky-400' : 'px-3 py-1 text-[10px] font-black rounded border border-slate-700 text-slate-500';
             document.getElementById('btn-en').className = lang === 'en' ? 'px-3 py-1 text-[10px] font-black rounded border border-sky-400 text-sky-400' : 'px-3 py-1 text-[10px] font-black rounded border border-slate-700 text-slate-500';
         }
